@@ -1,1 +1,14 @@
 <p>formulario-cadastro works!</p>
+<router-outlet>
+<form (ngSubmit)="onSubmit()" [formGroup]="formularioDeCadastro">
+    <label for="nome">Digite seu nome completo</label>
+    <input type="text" name="nome">
+    <label for="bi">Digite seu BI</label>
+    <input type="text" name="bi">
+    <label for="email">Digite seu E-mail</label>
+    <input type="text" name="email">
+    <label for="telefone">Digite seu telefone</label>
+    <input type="text" name="telefone">
+    <input type="submit" value="Submeter Formulário" [disabled]="formularioDeCadastro.invalid">
+</form>
+</router-outlet>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario-cadastro',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioCadastroComponent implements OnInit {
 
-  constructor() { }
+    public formularioDeCadastro ! : FormGroup;
+ 
+    constructor(
+      private formConstrutor : FormBuilder
+    ) 
+    { }
 
   ngOnInit(): void {
+    this.formularioDeCadastro = this.formConstrutor.group(
+      {
+      nome : ['', [Validators.required]],
+      bi : ['', [Validators.required]],
+      email :  ['', [Validators.required]],
+      telefone :  ['', [Validators.required]]
+      }
+    )
   }
 
+  onSubmit()
+  {
+      console.log(this.formularioDeCadastro.value)
+  }
 }
