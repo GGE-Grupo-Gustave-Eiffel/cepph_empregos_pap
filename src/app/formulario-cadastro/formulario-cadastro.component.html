@@ -1,1 +1,13 @@
 <p>formulario-cadastro works!</p>
+
+<form (ngSubmit)="onSubmit()" [formGroup]="formularioDeCadastro">
+    <label for="nome">Digite seu nome completo</label>
+    <input type="text" formControlName="nome"  name="nome">
+    <label for="bi">Digite seu BI</label>
+    <input type="text" formControlName="bi" name="bi">
+    <label for="email">Digite seu E-mail</label>
+    <input type="text" formControlName="email" name="email">
+    <label for="telefone">Digite seu telefone</label>
+    <input type="text" formControlName="telefone" name="telefone">
+    <input type="submit" value="Submeter Formulário" [disabled]="formularioDeCadastro.invalid">
+</form>
