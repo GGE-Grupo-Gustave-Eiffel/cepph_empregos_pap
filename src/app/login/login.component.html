@@ -1,1 +1,11 @@
-<p>login works!</p>
+<div id="form-container">
+    <form (ngSubmit)="onSubmit()" [formGroup]="formularioLogin">
+        <label for="name">Nome de utilizador</label>
+        <input type="email" formControlName="email"  name="email">
+        <label for="password">Senha</label>
+        <input type="password" formControlName="password"  name="password">
+
+        <!-- butão de submissão -->
+        <input type="submit" value="Entrar"  [disabled]="formularioLogin.invalid">
+    </form>
+</div>
