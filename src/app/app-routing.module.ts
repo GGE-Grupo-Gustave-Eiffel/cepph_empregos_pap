@@ -6,9 +6,11 @@ const routes: Routes = [
 
   {path:'login', loadChildren : () => import('./login/login.module').then(m => m.LoginModule)},
   
-  {path : 'pagina-candidaturas', loadChildren : () => import('./pagina-candidaturas/pagina-candidaturas.module').then(m => m.PaginaCandidaturasModule)},
+  {path : 'candidaturas', loadChildren : () => import('./pagina-candidaturas/pagina-candidaturas.module').then(m => m.PaginaCandidaturasModule)},
 
-  {path : 'formulario-cadastro', loadChildren : () => import('./formulario-cadastro/formulario-cadastro.module').then(m => m.FormularioCadastroModule)},
+  {path : 'cadastro', loadChildren : () => import('./formulario-cadastro/formulario-cadastro.module').then(m => m.FormularioCadastroModule)},
+
+  {path : 'inscritos', loadChildren : () => import('./pagina-inscritos/pagina-inscritos.module').then(m => m.PaginaInscritosModule)},
 
   {path : 'definicoes', loadChildren : () => import('./definicoes/definicoes.module').then(m => m.DefinicoesModule)}
 ];

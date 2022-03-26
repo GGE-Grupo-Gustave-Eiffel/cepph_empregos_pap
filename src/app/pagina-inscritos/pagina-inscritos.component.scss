@@ -1,0 +1,57 @@
+.container {
+    width : 90vw;
+    margin : 50px auto;
+    
+}
+
+.candidatura {
+    margin-bottom : 60px;
+    display : flex;
+    padding : 40px;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 10px 10px 0 rgba(87, 87, 87, 0.13);
+}
+
+.grid-duas-colunas {
+    display : grid;
+    column-gap : 60px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.nome-candidato {
+    text-transform: uppercase;
+    margin-bottom : 30px;
+   
+}
+
+li {
+    list-style : none;
+}
+
+.rotulo {
+    font-weight: bold;
+}
+
+.candidato-foto div {
+    width : 60px;
+    height : 60px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background-color: rgb(3, 109, 86);
+}
+
+.anular-inscricao {
+    margin-top : 20px;
+}
+
+.anular-inscricao button {
+    padding : 10px;
+    text-transform: uppercase;
+    color : #fff;
+    border-radius : 100px;
+    background-color: rgb(3, 109, 86);
+    font-weight: bold;
+    cursor: pointer;
+    border : none;
+}

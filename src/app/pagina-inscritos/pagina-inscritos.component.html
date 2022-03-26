@@ -1,0 +1,52 @@
+<div class="container">
+    <h2>Candidaturas submetidas</h2>
+
+    <ul class="grid-duas-colunas">
+        <li  *ngFor="let inscricao of inscricoes_dados">
+            <div class="candidatura">
+
+                <section class="candidato-foto">
+                    <div></div>
+                </section>
+
+                <section class="parte-superior">
+                    <h4 class="nome-candidato">{{inscricao.nome}}</h4>
+                </section>
+
+                <section class="parte-dados">
+                    <p>
+                        <span class="rotulo">Nome da vaga</span> : {{inscricao.nomeVaga}}
+                    </p>
+
+                    <p>
+                        <span class="rotulo">Telefone</span> : {{inscricao.telefone}}
+                    </p>
+
+                    <p>
+                        <span class="rotulo">Genero</span> : {{inscricao.genero}}
+                    </p>
+
+                    <p>
+                        <span class="rotulo">Nacionalidade</span> : {{inscricao.nacionalidade}}
+                    </p>
+
+                    <p>
+                        <span class="rotulo">Nível acadêmico</span> : {{inscricao.nivelAcamico}}
+                    </p>
+                </section>
+
+                <section class="anular-inscricao">
+                    <button>Anular Inscrição</button>
+                </section>
+            </div>
+        </li>
+    </ul>
+    
+
+    <footer>
+        <p>2008-2022 CEPPH | Todos os direitos reservados</p>
+      </footer>
+      
+</div>
+
+
