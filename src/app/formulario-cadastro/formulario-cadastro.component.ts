@@ -19,9 +19,14 @@ export class FormularioCadastroComponent implements OnInit {
     this.formularioDeCadastro = this.formConstrutor.group(
       {
       nome : ['', [Validators.required]],
+      data : ['', [Validators.required]],
       bi : ['', [Validators.required]],
+      nacionalidade : ['', [Validators.required]],
       email :  ['', [Validators.required]],
-      telefone :  ['', [Validators.required]]
+      nivel_academico :['',[Validators.required]],
+      telefone :  ['', [Validators.required]],
+      anos_xp : ['',[Validators.required]],
+      descricao_xp : ['',[Validators.required]]
       }
     )
   }
