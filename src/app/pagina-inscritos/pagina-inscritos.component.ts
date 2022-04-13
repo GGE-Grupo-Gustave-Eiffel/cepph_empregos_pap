@@ -1,4 +1,6 @@
+import { RequisicaoService } from './../servico/requisicao.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-pagina-inscritos',
@@ -7,62 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaInscritosComponent implements OnInit {
 
-  public inscricoes_dados : any[] = [
-    {
-      nome : 'Justino Filipe',
-      nomeVaga : 'Técnico de Informática',
-      dataInscricao : '2022-03-25',
-      telefone : '+355900888500',
-      genero : 'M',
-      nacionalidade : 'Angolana',
-      nivelAcamico : 'Técnico médio'
-    },
-
-    {
-      nome : 'Anildo Marques',
-      nomeVaga : 'Técnico de Informática',
-      dataInscricao : '2022-03-25',
-      telefone : '+355900888500',
-      genero : 'M',
-      nacionalidade : 'Angolana',
-      nivelAcamico : 'Técnico médio'
-    },
-
-    {
-      nome : 'Jeterson Jesus',
-      nomeVaga : 'Técnico de Informática',
-      dataInscricao : '2022-03-25',
-      telefone : '+355900888500',
-      genero : 'M',
-      nacionalidade : 'Angolana',
-      nivelAcamico : 'Técnico médio'
-    },
-
-    {
-      nome : 'Lucamba',
-      nomeVaga : 'Técnico de Informática',
-      dataInscricao : '2022-03-25',
-      telefone : '+355900888500',
-      genero : 'M',
-      nacionalidade : 'Angolana',
-      nivelAcamico : 'Técnico médio'
-    },
-
-    {
-      nome : 'Luís Tchitue',
-      nomeVaga : 'Técnico de Informática',
-      dataInscricao : '2022-03-25',
-      telefone : '+355900888500',
-      genero : 'M',
-      nacionalidade : 'Angolana',
-      nivelAcamico : 'Técnico médio'
-    }
-  ];
+   inscricoes_dados: Array <any> = [];
 
 
-  constructor() { }
+  constructor(private requisicaoService : RequisicaoService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+   // this.listar();
+   this.requisicaoService.listar().subscribe((dados) => {
+     this.inscricoes_dados.push(dados);
+    });
   }
 
+ /* listar (){
+
+    this.requisicaoService.listar().subscribe(dados => this.inscricoes_dados = dados);
+  }*/
 }
