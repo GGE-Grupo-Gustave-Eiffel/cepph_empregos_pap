@@ -12,6 +12,8 @@ const routes: Routes = [
 
   {path : 'inscritos', loadChildren : () => import('./pagina-inscritos/pagina-inscritos.module').then(m => m.PaginaInscritosModule)},
 
+  {path : 'criar', loadChildren : () => import('./pagina-criacao-vagas/pagina-criacao-vagas.module').then(m => m.PaginaCriacaoVagasModule)},
+
   {path : 'definicoes', loadChildren : () => import('./definicoes/definicoes.module').then(m => m.DefinicoesModule)}
 ];
 
