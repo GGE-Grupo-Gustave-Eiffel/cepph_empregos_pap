@@ -1,24 +1,36 @@
-#form-container {
+/*ESILIZÇÃO PARA O FORMULÁRIO DE LOGIN*/
+
+
+.login-container {
     display: flex;
     justify-content: center;
 }
 
-form {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border: dotted 5px blue;
-    padding : 20px;
-    margin : 5rem;
-    width : 50vw;
+
+.utilizador{
+    width: 50%;
+    height: 100vh;
+    border-right: solid 1px grey;
 }
 
-input[type="submit"] {
-    margin : 10px 0;
-    border-radius : 0.5rem;
-    border : none;
-    color : #fff;
-    background-color: rgb(4, 45, 58);
-    font-weight: bold;
-    height : 5vh;
+.vagas-definicoes{
+    width: 50%;
+    height: 100vh;
+    margin-left: 2.2rem;
+}
+
+.text-senha {
+    text-align: left;
+}
+
+.text-senha {
+    font-size: 1.6rem;
+    color : #868e96;
+}
+
+.utilizador {
+    width: 500px;
+    height: 3.2rem;
+    color : #868e96;
+
 }
