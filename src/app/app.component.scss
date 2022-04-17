@@ -1,0 +1,29 @@
+.barra-nav {
+    padding : 2.4rem 0;
+    border-bottom: solid 1px #d0ebff;
+}
+
+
+
+
+/*ESTILIZAÇÃO DO LOGOTIPO*/
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size : 2.2rem;
+    font-weight: 900;
+    color : #1864ab;
+    text-transform: uppercase;
+    letter-spacing: 1.2;
+}
+
+.nav-itens a:link, .nav-itens a:visited {
+    text-decoration: none;
+    font-size : 1.2rem;
+    padding : 1.6rem;
+    color : #fff;
+    background-color: #1864ab;
+    border-radius: 3px;
+}
