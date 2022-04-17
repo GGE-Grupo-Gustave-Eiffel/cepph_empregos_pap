@@ -1,24 +1,59 @@
-#form-container {
-    display: flex;
-    justify-content: center;
-}
-
-form {
-    display: flex;
-    justify-content: center;
+/*ESTILIZAÇÃO DO FORMULÁRIO*/
+.formulario {
     flex-direction: column;
-    border: dotted 5px blue;
-    padding : 20px;
-    margin : 5rem;
-    width : 50vw;
 }
 
-input[type="submit"] {
-    margin : 10px 0;
-    border-radius : 0.5rem;
-    border : none;
-    color : #fff;
-    background-color: rgb(4, 45, 58);
-    font-weight: bold;
-    height : 5vh;
+.rotulo-do-input {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.rotulo-e-input {
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;  
+}
+
+.rotulo-do-input {
+    font-size: 1.6rem;
+    color : #868e96;
+}
+
+.input-de-dados {
+    height: 2.2rem;
+    color : #868e96;
+}
+
+.descricao {
+    align-self: flex-start;
+}
+
+.descricao > .secondary-title {
+    color : #1971c2;
+}
+
+.descricao > .describing-text {
+    color : #339af0;
+}
+
+.rotulo-do-input,
+.input-de-dados {
+    display: inline-block;
+    width: 100%;
+}
+
+.select-input {
+    height: 2.8rem;
+}
+
+.btn-formulario {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lado-a-lado {
+    width: 100%;
 }

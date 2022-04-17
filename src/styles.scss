@@ -1,6 +1,13 @@
+/*SISTEMA DE COR E ESPAÇO*/
+/*
+    COR PRIMÁRIA : #1864ab
+    COR SECUNDÁRIA : #1971c2
+    COR TERCEARIA : #339af0
+
+*/
+
 
 /*SECÇÃO PARA IMPORTAR CSS EXTERNO*/
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;800&display=swap');
 
 /* You can add global styles to this file, and also import other style files */
 * {
@@ -38,4 +45,47 @@ body {
 
 .gap-medium {
     gap : 1.6rem;
+}
+
+.margin-small-top {
+    margin-top: 0.8rem;
+}
+
+.margin-medium-top {
+    margin-top: 1.6rem;
+}
+
+.margin-big-bottom {
+    margin-bottom: 3.2rem;
+}
+
+.margin-big-top {
+    margin-top: 3.2rem;
+}
+
+
+/*WIDGETS*/
+.btn {
+    font-size : 1.2rem;
+    padding : 1.6rem;
+    color : #fff;
+    border : none;
+    background-color: #1864ab;
+    border-radius: 3px;
+}
+
+/*FORMATAÇÃO GERAL DE TEXTO*/
+.secondary-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    color:#868e96;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+.describing-text {
+    font-size : 1.6rem;
+    font-weight: 200;
+    line-height: 2;
+    color : #868e96;
 }
