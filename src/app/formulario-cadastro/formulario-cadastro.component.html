@@ -3,12 +3,31 @@
     <form (ngSubmit)="onSubmit()" [formGroup]="formularioDeCadastro">
         <label for="nome">Digite seu nome completo</label>
         <input type="text" formControlName="nome"  name="nome">
+        <label for="data">Insire sua data de nascimento</label>
+        <input type="date" formControlName="data" name="data">
         <label for="bi">Digite seu BI</label>
         <input type="text" formControlName="bi" name="bi">
+        <label for="nacionalidade">Digete a sua nacionalidade</label>
+        <input type="text" formControlName="nacionalidade" name="nacionalidade">
         <label for="email">Digite seu E-mail</label>
         <input type="text" formControlName="email" name="email">
+        <label for="nivel_academico">Seleccione seu nível académico</label>
+        <select formControlName="nivel_academico" NAME="nivel_academico">
+            <option value="1">Ensino Base</option>
+            <option value="2">Ensino Secundário</option>
+            <option value="3">Ensino Médio Incompleto</option>
+            <option value="4">Ensino Médio Completo</option>
+            <option value="5">Bacharelato</option>
+            <option value="6">Licenciatura</option>
+            <option value="7">Mestrado</option>
+            <option value="8">Doutoramento</option>
+            </select>
         <label for="telefone">Digite seu telefone</label>
         <input type="text" formControlName="telefone" name="telefone">
+        <label for="anos_xp">Digite abaixo quantos anos de experiência tu tens.</label>
+        <input type="number" formControlName="anos_xp" name="anos_xp">
+        <label for="descricao_xp">Faça uma breve descrição profissional. E explique o motivo porque deve ser contratado.</label>
+        <input type="text" formContolName="descricao_xp" name="descricao_xp">
         <input type="submit" value="Submeter Formulário" [disabled]="formularioDeCadastro.invalid">
     </form>
     
