@@ -1,0 +1,36 @@
+<div class="descricao margin-big-bottom">
+    <p class="secondary-title ">Empregos disponíveis</p>
+    <p class="describing-text">*Atenção ao limite da candidatura</p>
+</div>
+
+
+<div class="cartao-vaga flex-container gap-medium" *ngFor="let i of [1,2,3,4,5]">
+    <div class="parte-cabecalho margin-big-bottom">
+        <h3 class="secondary-title ">Auxiliar de Informática</h3>
+    </div>
+    <div class="parte-principal gap-medium">
+        
+        <div class="numero-de-vagas flex-container gap-small">
+            <p class="rotulo describing-text">vagas:</p>
+            <p class="valor describing-text">0</p>
+        </div>
+
+        <div class="departamento flex-container gap-small margin-big-bottom">
+            <p class="rotulo describing-text">departamento:</p>
+            <p class="valor describing-text">pedagógico</p>
+        </div>
+
+        <div class="aviso-limite flex-container gap-small margin-big-bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" class="aviso-icone" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            <div class="aviso-texto">
+                <p class="describing-text">Disponível até 20 de Setembro de 2022</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-candidatura">
+        <a class="btn" routerLink="/">Candidatar-se</a>
+    </div>
+</div>

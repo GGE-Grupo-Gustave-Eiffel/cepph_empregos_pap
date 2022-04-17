@@ -1,0 +1,40 @@
+/*ESTILIZAÇÃO PARA O CARTÃO DE VAGAS*/
+
+
+.aviso-icone {
+    width: 24px;
+    height: 24px;
+    stroke : #c92a2a;
+}
+
+.cartao-vaga {
+    display: inline-block;
+    margin: 0 0.8rem 0.8rem 0;
+    background-color: #fff;
+    padding : 2.4rem;
+    border : solid 2px #e9ecef;
+}
+
+.aviso-texto p {
+    color : #c92a2a;
+}
+
+.cartao-vaga, .parte-principal {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.rotulo, .valor {
+    text-transform: uppercase;
+}
+
+.btn-candidatura a {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.valor {
+    font-weight: 800;
+}

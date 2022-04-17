@@ -1,86 +1,81 @@
+<form class="formulario flex-container gap-small " (ngSubmit)="onSubmit()" [formGroup]="formularioDeCadastro">
 
-<div class="container margin-big-top">
-    
-    <form class="formulario flex-container gap-small " (ngSubmit)="onSubmit()" [formGroup]="formularioDeCadastro">
+    <div class="descricao margin-big-bottom">
+        <p class="secondary-title ">Dados Pessoais</p>
+        <p class="describing-text">*Todo os campos são obrigatórios</p>
+    </div>
 
-        <div class="descricao margin-big-bottom">
-            <p class="secondary-title ">Dados Pessoais</p>
-            <p class="describing-text">*Todo os campos são obrigatórios</p>
+    <div class="lado-a-lado flex-container gap-medium">
+        <div class="rotulo-e-input flex-container gap-small">
+            <label class="rotulo-do-input" for="nome">Digite seu nome completo</label>
+            <input class="input-de-dados" type="text" formControlName="nome"  name="nome">
+        </div>
+        
+        <div class="rotulo-e-input flex-container gap-small">
+            <label class="rotulo-do-input" for="data">Insire sua data de nascimento</label>
+            <input class="input-de-dados" type="date" formControlName="data" name="data">
+        </div> 
+    </div>
+        
+    <div class="lado-a-lado flex-container gap-medium margin-big-bottom">
+        <div class="rotulo-e-input flex-container gap-small">
+            <label class="rotulo-do-input" for="bi">Digite seu BI</label>
+            <input class="input-de-dados" type="text" formControlName="bi" name="bi">
         </div>
 
-        <div class="lado-a-lado flex-container gap-medium">
-            <div class="rotulo-e-input flex-container gap-small">
-                <label class="rotulo-do-input" for="nome">Digite seu nome completo</label>
-                <input class="input-de-dados" type="text" formControlName="nome"  name="nome">
-            </div>
-           
-            <div class="rotulo-e-input flex-container gap-small">
-                <label class="rotulo-do-input" for="data">Insire sua data de nascimento</label>
-                <input class="input-de-dados" type="date" formControlName="data" name="data">
-            </div> 
-        </div>
-           
-        <div class="lado-a-lado flex-container gap-medium margin-big-bottom">
-            <div class="rotulo-e-input flex-container gap-small">
-                <label class="rotulo-do-input" for="bi">Digite seu BI</label>
-                <input class="input-de-dados" type="text" formControlName="bi" name="bi">
-            </div>
+        <div class="rotulo-e-input flex-container gap-small">    
+            <label class="rotulo-do-input"  for="nacionalidade">Digete a sua nacionalidade</label>
+            <input class="input-de-dados" type="text" formControlName="nacionalidade" name="nacionalidade">
+        </div>     
+    </div>
 
-            <div class="rotulo-e-input flex-container gap-small">    
-                <label class="rotulo-do-input"  for="nacionalidade">Digete a sua nacionalidade</label>
-                <input class="input-de-dados" type="text" formControlName="nacionalidade" name="nacionalidade">
-            </div>     
+    <div class="descricao margin-big-bottom">
+        <p class="secondary-title ">Contactos</p>
+        <p class="describing-text">*Todo os campos são obrigatórios</p>
+    </div>
+
+    <div class="lado-a-lado flex-container gap-medium margin-big-bottom">
+        <div class="rotulo-e-input flex-container gap-small">    
+            <label class="rotulo-do-input" for="email">Digite seu E-mail</label>
+            <input class="input-de-dados" type="text" formControlName="email" name="email">
         </div>
 
-        <div class="descricao margin-big-bottom">
-            <p class="secondary-title ">Contactos</p>
-            <p class="describing-text">*Todo os campos são obrigatórios</p>
+        <div class="rotulo-e-input flex-container gap-small">
+            <label class="rotulo-do-input" for="telefone">Digite seu telefone</label>
+            <input class="input-de-dados" type="text" formControlName="telefone" name="telefone">
+        </div>  
+    </div>    
+
+    <div class="descricao margin-big-bottom">
+        <p class="secondary-title ">Informação acadêmica e Profissional</p>
+        <p class="describing-text">*Todo os campos são obrigatórios</p>
+    </div>
+
+    <div class="lado-a-lado flex-container gap-medium">
+        <div class="rotulo-e-input flex-container gap-small">
+            <label class="rotulo-do-input" for="nivel_academico">Seleccione seu nível académico</label>
+            <select class="input-de-dados select-input" formControlName="nivel_academico" NAME="nivel_academico">
+                <option value="1">Ensino Base</option>
+                <option value="2">Ensino Secundário</option>
+                <option value="3">Ensino Médio Incompleto</option>
+                <option value="4">Ensino Médio Completo</option>
+                <option value="5">Bacharelato</option>
+                <option value="6">Licenciatura</option>
+                <option value="7">Mestrado</option>
+                <option value="8">Doutoramento</option>
+            </select>
         </div>
 
-        <div class="lado-a-lado flex-container gap-medium margin-big-bottom">
-            <div class="rotulo-e-input flex-container gap-small">    
-                <label class="rotulo-do-input" for="email">Digite seu E-mail</label>
-                <input class="input-de-dados" type="text" formControlName="email" name="email">
-            </div>
-
-            <div class="rotulo-e-input flex-container gap-small">
-                <label class="rotulo-do-input" for="telefone">Digite seu telefone</label>
-                <input class="input-de-dados" type="text" formControlName="telefone" name="telefone">
-            </div>  
+        <div class="rotulo-e-input flex-container gap-small">    
+            <label class="rotulo-do-input" for="anos_xp">Digite abaixo quantos anos de experiência tu tens.</label>
+            <input class="input-de-dados" type="number" formControlName="anos_xp" name="anos_xp">
         </div>    
+    </div>
+        
+    <div class="rotulo-e-input flex-container gap-small margin-big-bottom">    
+        <label class="rotulo-do-input" for="descricao_xp">Faça uma breve descrição profissional. E explique o motivo porque deve ser contratado.</label>
+        <input class="input-de-dados" type="text" formContolName="descricao_xp" name="descricao_xp">
+    </div>    
 
-        <div class="descricao margin-big-bottom">
-            <p class="secondary-title ">Informação acadêmica e Profissional</p>
-            <p class="describing-text">*Todo os campos são obrigatórios</p>
-        </div>
-
-        <div class="lado-a-lado flex-container gap-medium">
-            <div class="rotulo-e-input flex-container gap-small">
-                <label class="rotulo-do-input" for="nivel_academico">Seleccione seu nível académico</label>
-                <select class="input-de-dados select-input" formControlName="nivel_academico" NAME="nivel_academico">
-                    <option value="1">Ensino Base</option>
-                    <option value="2">Ensino Secundário</option>
-                    <option value="3">Ensino Médio Incompleto</option>
-                    <option value="4">Ensino Médio Completo</option>
-                    <option value="5">Bacharelato</option>
-                    <option value="6">Licenciatura</option>
-                    <option value="7">Mestrado</option>
-                    <option value="8">Doutoramento</option>
-                </select>
-            </div>
-
-            <div class="rotulo-e-input flex-container gap-small">    
-                <label class="rotulo-do-input" for="anos_xp">Digite abaixo quantos anos de experiência tu tens.</label>
-                <input class="input-de-dados" type="number" formControlName="anos_xp" name="anos_xp">
-            </div>    
-        </div>
-            
-        <div class="rotulo-e-input flex-container gap-small margin-big-bottom">    
-            <label class="rotulo-do-input" for="descricao_xp">Faça uma breve descrição profissional. E explique o motivo porque deve ser contratado.</label>
-            <input class="input-de-dados" type="text" formContolName="descricao_xp" name="descricao_xp">
-        </div>    
-
-        <input class="btn btn-formulario" type="submit" value="Submeter Formulário" [disabled]="formularioDeCadastro.invalid">
-    </form>
-    
-</div>
+    <input class="btn btn-formulario" type="submit" value="Submeter Formulário" [disabled]="formularioDeCadastro.invalid">
+</form>

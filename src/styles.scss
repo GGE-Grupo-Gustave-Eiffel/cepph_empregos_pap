@@ -4,6 +4,12 @@
     COR SECUNDÁRIA : #1971c2
     COR TERCEARIA : #339af0
 
+
+    CORES ACINZENTADAS
+    #f8f9fa
+
+
+
 */
 
 
@@ -22,6 +28,7 @@ html {
 
 body {
     font-family: 'Rubik', sans-serif;
+    background-color: #f1f3f5;
 }
 
 /*ESTILOS GERAIS DE LAYOUT*/
@@ -88,4 +95,16 @@ body {
     font-weight: 200;
     line-height: 2;
     color : #868e96;
+}
+
+.descricao {
+    align-self: flex-start;
+}
+
+.descricao > .secondary-title {
+    color : #1971c2;
+}
+
+.descricao > .describing-text {
+    color : #339af0;
 }
