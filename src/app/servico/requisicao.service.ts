@@ -8,13 +8,16 @@ import {catchError, retry} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class RequisicaoService {
+  
 
   //requisicaoUrl = '127.0.0.1:8000/api/vaga';
-  constructor(private http : HttpClient) { }
+  constructor(private httpClient : HttpClient) { }
+
 
   listar(){
    // return this.http.get<any[]>(`${this.requisicaoUrl}`);
-   return this.http.get<any[]>(`${environment.baseUrl}/vagas`);
+   //return this.http.get<any[]>(`${environment.baseUrl}/vagas`);
+   return this.httpClient.get('http://127.0.0.1:8000/api/inscritos');
   }
   /*list(){
     return this.http.get<any[]>(`${environment.baseUrl}/inscritos`);
