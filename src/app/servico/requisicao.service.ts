@@ -16,4 +16,7 @@ export class RequisicaoService {
    // return this.http.get<any[]>(`${this.requisicaoUrl}`);
    return this.http.get<any[]>(`${environment.baseUrl}/vagas`);
   }
+  /*list(){
+    return this.http.get<any[]>(`${environment.baseUrl}/inscritos`);
+  }*/
 }

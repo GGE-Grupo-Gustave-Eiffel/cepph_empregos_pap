@@ -1,11 +1,12 @@
-<div class="login-container">
-    <form (ngSubmit)="onSubmit()" [formGroup]="formularioLogin">
-        <label for="name" >Nome de utilizador</label>
-        <input type="email" class="utilizador" formControlName="email"  name="email">
-        <label for="password">Senha</label>
-        <input type="password" class="utilizador" formControlName="password"  name="password">
+<div class="login-container flex-container space-between">
+    
+    <div class="utilizador margin-big-bottom">
+        <p class="fazer secondary-title">Fazer Login</p>
+        <label for="" class="text-senha">Nome de Administrador:</label>
+        <input placeholder="Degite o Nome de Utilizador" type="text" class="input-senha margin-big-bottom">
+        <label for="" class="text-senha">Senha:</label>
+        <input placeholder="Degite a Senha" type="password" class="input-senha margin-big-bottom">
+        <input class="entrar btn btn-formulario" type="submit" value="Entrar" [disabled]="">
+    </div>  
 
-        <!-- butão de submissão -->
-        <input type="submit" value="Entrar"  [disabled]="formularioLogin.invalid">
-    </form>
 </div>

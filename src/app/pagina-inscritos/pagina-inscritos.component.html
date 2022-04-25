@@ -1,7 +1,7 @@
 
 
 <div class="container">
-    <h2>Candidaturas submetidas</h2>
+    <h2 class="secondary-title">Candidaturas submetidas</h2>
 
     <ul class="grid-duas-colunas">
         <li  *ngFor="let inscricao of inscricoes_dados">
@@ -17,7 +17,7 @@
 
                 <section class="parte-dados">
                     <p>
-                        <span class="rotulo">Nome da vaga</span> : {{inscricao.nomeVaga}}
+                        <span class="rotulo">Nome da vaga</span> : {{inscricao.Nome}}
                     </p>
 
                     <p>
@@ -25,7 +25,7 @@
                     </p>
 
                     <p>
-                        <span class="rotulo">Genero</span> : {{inscricao.genero}}
+                        <span class="rotulo">Gênero</span> : {{inscricao.genero}}
                     </p>
 
                     <p>
@@ -44,9 +44,5 @@
         </li>
     </ul>
     
-
-    <footer>
-        <p>2008-2022 CEPPH | Todos os direitos reservados</p>
-      </footer>
       
 </div>
