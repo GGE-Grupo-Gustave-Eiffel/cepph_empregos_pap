@@ -1,0 +1,35 @@
+<form class="formulario flex-container gap-small ">
+
+    <div class="descricao margin-big-bottom">
+        <p class="secondary-title ">Adicionar Vagas Disponíveis</p>
+        <p class="describing-text">*Todo os campos são obrigatórios</p>
+    </div>
+
+    <div class="lado-a-lado flex-container gap-medium">
+        <div class="rotulo-e-input flex-container gap-small">
+            <label class="rotulo-do-input assim" for="nome">Insira o Número do Departamento: </label>
+            <label class="rotulo-numeros" for="numero">(1 = Departamento Pedagógico; 2 = Departamento Administrativo) </label>
+            <input class="input-de-dados" type="number" formControlName="departamento"  name="departamento">
+        </div>
+        
+        <div class="rotulo-e-input flex-container gap-small">
+            <label class="rotulo-do-input assim" for="data">Insira o Número de Vagas</label>
+            <input class="input-de-dados" type="number" formControlName="numero_de_vagas" name="numero_de_vagas">
+        </div> 
+    </div>
+        
+    <div class="lado-a-lado flex-container gap-medium margin-big-bottom">
+        <div class="rotulo-e-input flex-container gap-small">
+            <label class="rotulo-do-input assim" for="bi">Insira a Data de Limite de Candidatura</label>
+            <input class="input-de-dados" type="date" formControlName="limite_de_candidatura" name="limite_de_candidatura">
+        </div>
+
+        <div class="rotulo-e-input flex-container gap-small">    
+            <label class="rotulo-do-input assim"  for="nacionalidade">Insira o Cargo da Vaga Disponível</label>
+            <input class="input-de-dados" type="text" formControlName="nacionalidade" name="nacionalidade">
+        </div>     
+    </div>
+
+    
+    <input class="btn btn-formulario btn-vagas" type="submit" value="Submeter Vaga" >
+</form>
