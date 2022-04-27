@@ -2,7 +2,7 @@
     <h2 class="secondary-title">Candidaturas submetidas</h2>
 
     <ul class="grid-duas-colunas">
-        <li  *ngFor="let inscricao of inscricoes_dados">
+        <li  *ngFor="let inscricao of inscricoes_dados.incritos">
             <div class="candidatura">
 
                 <section class="candidato-foto">
@@ -10,7 +10,7 @@
                 </section>
 
                 <section class="parte-superior">
-                    <h4 class="nome-candidato">{{inscricao.nome}}</h4>
+                    <h4 class="nome-candidato">{{inscricao.Nome}}</h4>
                 </section>
 
                 <section class="parte-dados">

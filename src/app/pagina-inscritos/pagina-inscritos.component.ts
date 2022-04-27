@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaInscritosComponent implements OnInit {
 
-   inscricoes_dados: any;
+  public inscricoes_dados!: any;
 
 
   constructor(private requisicaoService : RequisicaoService) { 
@@ -28,10 +28,9 @@ export class PaginaInscritosComponent implements OnInit {
     listar (){
 
     //this.requisicaoService.listar().subscribe(dados => this.inscricoes_dados = dados);
-    console.log('Listando');
-    this.requisicaoService.listar().subscribe(res =>{
-      console.log(res);
-      this.inscricoes_dados = res;
+    console.log('<h3>Listando</h3>');
+    this.requisicaoService.listar_candidatos_inscritos().subscribe(res =>{
+      this.inscricoes_dados = res
     })
   }
 }
