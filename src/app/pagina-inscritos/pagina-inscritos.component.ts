@@ -9,20 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaInscritosComponent implements OnInit {
 
-   inscricoes_dados: Array <any> = [];
+  public inscricoes_dados!: any;
 
 
-  constructor(private requisicaoService : RequisicaoService) { }
+  constructor(private requisicaoService : RequisicaoService) { 
 
-  ngOnInit() {
-   // this.listar();
-   this.requisicaoService.listar().subscribe((dados) => {
-     this.inscricoes_dados.push(dados);
-    });
   }
 
- /* listar (){
+  ngOnInit() :  void {
+  
+    this.listar();
+  /*this.requisicaoService.listar().subscribe((dados) => {
+     this.inscricoes_dados.push(dados);
+    });*/
+    
+  }
 
-    this.requisicaoService.listar().subscribe(dados => this.inscricoes_dados = dados);
-  }*/
+    listar (){
+
+    //this.requisicaoService.listar().subscribe(dados => this.inscricoes_dados = dados);
+    console.log('<h3>Listando</h3>');
+    this.requisicaoService.listar_candidatos_inscritos().subscribe(res =>{
+      this.inscricoes_dados = res
+    })
+  }
 }

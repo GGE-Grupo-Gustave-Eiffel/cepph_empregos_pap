@@ -1,10 +1,8 @@
-
-
 <div class="container">
-    <h2>Candidaturas submetidas</h2>
+    <h2 class="secondary-title">Candidaturas submetidas</h2>
 
     <ul class="grid-duas-colunas">
-        <li  *ngFor="let inscricao of inscricoes_dados">
+        <li  *ngFor="let inscricao of inscricoes_dados.incritos">
             <div class="candidatura">
 
                 <section class="candidato-foto">
@@ -12,20 +10,28 @@
                 </section>
 
                 <section class="parte-superior">
-                    <h4 class="nome-candidato">{{inscricao.nome}}</h4>
+                    <h4 class="nome-candidato">{{inscricao.Nome}}</h4>
                 </section>
 
                 <section class="parte-dados">
                     <p>
-                        <span class="rotulo">Nome da vaga</span> : {{inscricao.nomeVaga}}
+                        <span class="rotulo">Nome da vaga</span> : {{inscricao.Nome}}
                     </p>
 
                     <p>
-                        <span class="rotulo">Telefone</span> : {{inscricao.telefone}}
+                        <span class="rotulo">B.I</span> : {{inscricao.BI}}
                     </p>
 
                     <p>
-                        <span class="rotulo">Genero</span> : {{inscricao.genero}}
+                        <span class="rotulo">Telefone</span> : {{inscricao.Telefone}}
+                    </p>
+
+                    <p>
+                        <span class="rotulo">E-mail</span> : {{inscricao.Email}}
+                    </p>
+
+                    <p>
+                        <span class="rotulo">Gênero</span> : {{inscricao.genero}}
                     </p>
 
                     <p>
@@ -33,7 +39,11 @@
                     </p>
 
                     <p>
-                        <span class="rotulo">Nível acadêmico</span> : {{inscricao.nivelAcamico}}
+                        <span class="rotulo">Anos de Experiência Profissional</span> : {{inscricao.Anos_de_experiencia}}
+                    </p>
+
+                    <p>
+                        <span class="rotulo">Nível acadêmico</span> : {{inscricao.Nivel_academico}}
                     </p>
                 </section>
 
@@ -44,9 +54,8 @@
         </li>
     </ul>
     
-
-    <footer>
-        <p>2008-2022 CEPPH | Todos os direitos reservados</p>
-      </footer>
       
+
+
+
 </div>

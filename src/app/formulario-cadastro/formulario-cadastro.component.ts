@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RequisicaoService } from '../servico/requisicao.service';
 
 @Component({
   selector: 'app-formulario-cadastro',
@@ -11,7 +12,8 @@ export class FormularioCadastroComponent implements OnInit {
     public formularioDeCadastro ! : FormGroup;
  
     constructor(
-      private formConstrutor : FormBuilder
+      private formConstrutor : FormBuilder,
+      private backendService : RequisicaoService
     ) 
     { }
 
@@ -33,6 +35,9 @@ export class FormularioCadastroComponent implements OnInit {
 
   onSubmit()
   {
-      console.log(this.formularioDeCadastro.value)
+    this.backendService.enviar_dados_de_candidatura(
+      this.formularioDeCadastro.value
+    ).subscribe(result => console.log(result));
+      
   }
 }

@@ -22,3 +22,28 @@
 .nav-itens a:link, .nav-itens a:visited {
     text-decoration: none;
 }
+
+/*ESTILIZAÇÃO DO RODAPÉ*/
+
+footer {
+    background-color : #1864ab;
+    display : flex;
+    justify-content: right;
+    align-items: center;   
+    padding-top: 0.2rem;
+    margin-top: 1.8rem;
+    font-size: 1.2rem;
+    position:relative;
+    bottom:0px;
+    left:0px;
+    width: 100%;
+}
+
+footer {
+    justify-content: center;
+    color : #fff;
+}
+
+footer {
+    height: 10vh;
+} 

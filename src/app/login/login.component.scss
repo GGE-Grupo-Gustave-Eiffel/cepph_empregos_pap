@@ -1,16 +1,35 @@
-/*ESILIZÇÃO PARA O FORMULÁRIO DE LOGIN*/
-
-
-.login-container {
-    display: flex;
-    justify-content: center;
+/*ESILIZÇÃO PARA AS DEFINIÇÕES DO ADMNISTRADOR*/
+.login-container{
+    padding-left: 25%;
+    padding-right: 50%;
+    height: 68.2vh;
 }
 
-
 .utilizador{
-    width: 50%;
-    height: 100vh;
-    border-right: solid 1px grey;
+    align-content: center;
+}
+
+.entrar{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+body{
+    color: #000;
+}
+
+p{
+    color: #000;
+    margin-left: 10%;
+    margin-bottom: 2.8rem;
+}
+
+.fazer{
+    padding-left: 25%;
 }
 
 .vagas-definicoes{
@@ -25,10 +44,11 @@
 
 .text-senha {
     font-size: 1.6rem;
-    color : #868e96;
+    color : #000000;
 }
 
-.utilizador {
+.input-senha {
+    display: block;
     width: 500px;
     height: 3.2rem;
     color : #868e96;

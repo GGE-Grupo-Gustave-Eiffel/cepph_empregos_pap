@@ -8,12 +8,23 @@ import {catchError, retry} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class RequisicaoService {
+  
 
   //requisicaoUrl = '127.0.0.1:8000/api/vaga';
-  constructor(private http : HttpClient) { }
+  constructor(private httpClient : HttpClient) { }
 
-  listar(){
+
+  listar_candidatos_inscritos(){
    // return this.http.get<any[]>(`${this.requisicaoUrl}`);
-   return this.http.get<any[]>(`${environment.baseUrl}/vagas`);
+   //return this.http.get<any[]>(`${environment.baseUrl}/vagas`);
+   return this.httpClient.get('http://127.0.0.1:8000/api/inscritos');
   }
+
+  enviar_dados_de_candidatura(obj_de_candidatura : any) {
+    return this.httpClient.post('http://127.0.0.1:8000/api/cadastro', obj_de_candidatura);
+  }
+
+  /*list(){
+    return this.http.get<any[]>(`${environment.baseUrl}/inscritos`);
+  }*/
 }

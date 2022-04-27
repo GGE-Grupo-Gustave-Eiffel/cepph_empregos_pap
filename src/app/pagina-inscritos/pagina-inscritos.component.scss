@@ -31,6 +31,15 @@ li {
 
 .rotulo {
     font-weight: bold;
+    font-size: 2.0rem;
+}
+
+h4, p{
+    font-size: 2.0rem;
+}
+
+h2{
+    color: #000;
 }
 
 .candidato-foto div {
@@ -38,7 +47,7 @@ li {
     height : 60px;
     margin-bottom: 20px;
     border-radius: 50%;
-    background-color: rgb(3, 109, 86);
+    background-color: rgb(42, 77, 190);
 }
 
 .anular-inscricao {
@@ -50,7 +59,7 @@ li {
     text-transform: uppercase;
     color : #fff;
     border-radius : 100px;
-    background-color: rgb(3, 109, 86);
+    background-color: rgb(42, 77, 190);
     font-weight: bold;
     cursor: pointer;
     border : none;
