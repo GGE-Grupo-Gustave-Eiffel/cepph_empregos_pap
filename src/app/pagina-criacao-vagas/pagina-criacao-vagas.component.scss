@@ -1,0 +1,55 @@
+/*ESTILIZAÇÃO DO FORMULÁRIO*/
+.formulario {
+    flex-direction: column;
+}
+
+.rotulo-do-input {
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.rotulo-e-input {
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;  
+}
+
+.rotulo-do-input {
+    font-size: 1.6rem;
+    /*color : #868e96;*/
+}
+
+.input-de-dados {
+    height: 2.2rem;
+    color : #868e96;
+}
+
+.rotulo-do-input,
+.input-de-dados {
+    display: inline-block;
+    width: 100%;
+}
+
+.select-input {
+    height: 2.8rem;
+}
+
+.btn-formulario {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.0rem;
+}
+
+.lado-a-lado {
+    width: 100%;
+}
+
+.rotulo-numeros{
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    font-size: 1.2rem;
+}
