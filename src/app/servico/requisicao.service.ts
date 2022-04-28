@@ -24,6 +24,13 @@ export class RequisicaoService {
     return this.httpClient.post('http://127.0.0.1:8000/api/cadastro', obj_de_candidatura);
   }
 
+  enviar_dados_de_criacao_de_vagas(obj_de_vagas : any) {
+    return this.httpClient.post('http://127.0.0.1:8000/api/vagas', obj_de_vagas);
+  }
+
+  listar_vagas() {
+    return this.httpClient.get('http://127.0.0.1:8000/api/vagas');
+  }
   /*list(){
     return this.http.get<any[]>(`${environment.baseUrl}/inscritos`);
   }*/

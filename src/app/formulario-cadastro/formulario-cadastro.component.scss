@@ -46,3 +46,15 @@
 .lado-a-lado {
     width: 100%;
 }
+
+/*ESTILIZAÇÃO DA CAIXA DE ERRO*/
+.erro-de-envio {
+    width: 100%;
+    padding : 10px;
+    background-color : #c57c7c;
+    color : #fff;
+}
+
+.erro-de-envio p {
+    font-size : 1.8rem;
+}

@@ -1,8 +1,12 @@
  <form class="formulario flex-container gap-small " (ngSubmit)="onSubmit()" [formGroup]="formularioDeCadastro">
 
+    <div class="erro-de-envio" *ngIf="alertDoServidor">
+        <p>{{msgDeEnvio.message}}</p>
+    </div>
+
     <div class="descricao margin-big-bottom">
         <p class="secondary-title ">Dados Pessoais</p>
-        <p class="describing-text">*Todo os campos são obrigatórios</p>
+        <p class="describing-text">*Todos os campos são obrigatórios</p>
     </div>
 
     <div class="lado-a-lado flex-container gap-medium">
@@ -15,6 +19,15 @@
             <label class="rotulo-do-input assim" for="data">Insire sua data de nascimento</label>
             <input class="input-de-dados" type="date" formControlName="data" name="data">
         </div> 
+
+        <div class="rotulo-e-input flex-container gap-small">
+            <label class="rotulo-do-input assim" for="genero">Seleccione seu gênero</label>
+            <select class="input-de-dados select-input" formControlName="genero" name="genero">
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                
+            </select>
+        </div>
     </div>
         
     <div class="lado-a-lado flex-container gap-medium margin-big-bottom">
@@ -31,7 +44,7 @@
 
     <div class="descricao margin-big-bottom">
         <p class="secondary-title ">Contactos</p>
-        <p class="describing-text">*Todo os campos são obrigatórios</p>
+        <p class="describing-text">*Todos os campos são obrigatórios</p>
     </div>
 
     <div class="lado-a-lado flex-container gap-medium margin-big-bottom">
@@ -48,21 +61,17 @@
 
     <div class="descricao margin-big-bottom">
         <p class="secondary-title ">Informação acadêmica e Profissional</p>
-        <p class="describing-text">*Todo os campos são obrigatórios</p>
+        <p class="describing-text">*Todos os campos são obrigatórios</p>
     </div>
 
     <div class="lado-a-lado flex-container gap-medium">
         <div class="rotulo-e-input flex-container gap-small">
             <label class="rotulo-do-input assim" for="nivel_academico">Seleccione seu nível académico</label>
             <select class="input-de-dados select-input" formControlName="nivel_academico" NAME="nivel_academico">
-                <option value="1">Ensino Base</option>
-                <option value="2">Ensino Secundário</option>
-                <option value="3">Ensino Médio Incompleto</option>
-                <option value="4">Ensino Médio Completo</option>
-                <option value="5">Bacharelato</option>
-                <option value="6">Licenciatura</option>
-                <option value="7">Mestrado</option>
-                <option value="8">Doutoramento</option>
+                <option value="1">Ensino Base(1ª - 9ª)</option>
+                <option value="2">Ensino Médio ou Técnico Médio (10ª - 13ª)</option>
+                <option value="3">Ensino Superior</option>
+                <option value="4">Sem Educação Formal</option>
             </select>
         </div>
 
@@ -77,5 +86,5 @@
         <input class="input-de-dados" type="text" formContolName="descricao_xp" name="descricao_xp">
     </div>    
 
-    <input class="btn btn-formulario" type="submit" value="Submeter Formulário" >
+    <input class="btn btn-formulario" type="submit" value="Submeter Candidatura" >
 </form>
