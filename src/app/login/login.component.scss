@@ -38,13 +38,11 @@ p{
     margin-left: 2.2rem;
 }
 
-.text-senha {
-    text-align: left;
-}
 
 .text-senha {
     font-size: 1.6rem;
     color : #000000;
+    align: center;
 }
 
 .input-senha {
@@ -52,5 +50,6 @@ p{
     width: 500px;
     height: 3.2rem;
     color : #868e96;
+    border-radius: 1.8rem;
 
 }

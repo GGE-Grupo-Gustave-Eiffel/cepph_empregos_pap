@@ -1,4 +1,4 @@
-<form class="formulario flex-container gap-small ">
+<form class="formulario flex-container gap-small" (ngSubmit)="onSubmit()" [formGroup]="paginaCriacaoVagas">
 
     <div class="descricao margin-big-bottom">
         <p class="secondary-title ">Adicionar Vagas Disponíveis</p>
@@ -6,27 +6,30 @@
     </div>
 
     <div class="lado-a-lado flex-container gap-medium">
-        <div class="rotulo-e-input flex-container gap-small">
-            <label class="rotulo-do-input assim" for="nome">Insira o Número do Departamento: </label>
-            <label class="rotulo-numeros" for="numero">(1 = Departamento Pedagógico; 2 = Departamento Administrativo) </label>
-            <input class="input-de-dados" type="number" formControlName="departamento"  name="departamento">
+            <div class="rotulo-e-input flex-container gap-small">
+                <label class="rotulo-do-input assim" for="nivel_academico">Seleccione o Departamento</label>
+                <select class="input-de-dados select-input" formControlName="Departamento" name="Departamento">
+                    <option value="1">Pedagógico</option>
+                    <option value="2">Administrativo</option>
+                </select>
+            </div>
+
+            <div class="rotulo-e-input flex-container gap-small">
+                <label class="rotulo-do-input assim" for="data">Insira o Número de Vagas Disponíveis</label>
+                <input class="input-de-dados" type="number" formControlName="Numero_de_vagas" name="Numero_de_vagas">
+            </div> 
         </div>
         
-        <div class="rotulo-e-input flex-container gap-small">
-            <label class="rotulo-do-input assim" for="data">Insira o Número de Vagas</label>
-            <input class="input-de-dados" type="number" formControlName="numero_de_vagas" name="numero_de_vagas">
-        </div> 
-    </div>
         
     <div class="lado-a-lado flex-container gap-medium margin-big-bottom">
         <div class="rotulo-e-input flex-container gap-small">
             <label class="rotulo-do-input assim" for="bi">Insira a Data de Limite de Candidatura</label>
-            <input class="input-de-dados" type="date" formControlName="limite_de_candidatura" name="limite_de_candidatura">
+            <input class="input-de-dados" type="date" formControlName="Limite_de_candidatura" name="Limite_de_candidatura">
         </div>
 
         <div class="rotulo-e-input flex-container gap-small">    
             <label class="rotulo-do-input assim"  for="nacionalidade">Insira o Cargo da Vaga Disponível</label>
-            <input class="input-de-dados" type="text" formControlName="nacionalidade" name="nacionalidade">
+            <input class="input-de-dados" type="text" formControlName="cargo" name="cargo">
         </div>     
     </div>
 
