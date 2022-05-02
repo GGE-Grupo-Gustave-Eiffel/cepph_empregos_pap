@@ -18,9 +18,9 @@ export class PaginaCriacaoVagasComponent implements OnInit {
   ngOnInit(): void {
     this.paginaCriacaoVagas = this.formConstrutor.group(
       {
-      Departamento : ['', [Validators.required]],
-      Numero_de_vagas : ['', [Validators.required]],
-      Limite_de_candidatura : ['', [Validators.required]],
+      departamento : ['', [Validators.required]],
+      numero_de_vagas : ['', [Validators.required]],
+      limite_de_candidatura : ['', [Validators.required]],
       cargo : ['', [Validators.required]]
       //id_vaga : [ '', [Validators.required]]
       }
@@ -30,6 +30,7 @@ export class PaginaCriacaoVagasComponent implements OnInit {
   onSubmit() {
     this.backendService.enviar_dados_de_criacao_de_vagas(this.paginaCriacaoVagas.value).
       subscribe((result) => {
+        
         console.log(this.paginaCriacaoVagas.value)
         console.log(result)
       });

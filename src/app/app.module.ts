@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { RequisicaoService } from './servico/requisicao.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { GuardasService } from './guardas/guardas.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { HomeComponent } from './home/home.component';
     RouterModule,
     FormsModule
   ],
-  //providers: [RequisicaoService],
+  providers: [
+    GuardasService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

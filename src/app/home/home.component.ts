@@ -28,6 +28,13 @@ export class HomeComponent implements OnInit {
     return idEmNumero - 1;
   }
 
-  
+  // getI_vaga(Id_v : any)
+  // {
+  //   console.log(Id_v);
+  //   let Id_vaga = Id_v.Id;
+  //   return Id_vaga;
+  // }
+
+
 
 }
