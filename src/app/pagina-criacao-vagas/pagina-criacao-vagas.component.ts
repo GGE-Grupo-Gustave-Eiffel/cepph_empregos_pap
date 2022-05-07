@@ -10,6 +10,10 @@ import { RequisicaoService } from '../servico/requisicao.service';
 export class PaginaCriacaoVagasComponent implements OnInit {
 
   public paginaCriacaoVagas ! : FormGroup;
+  public msgDeEnvio! : any;
+  public alertDoServidor : boolean = false;
+  public sub !: any;
+
   constructor(
     private formConstrutor : FormBuilder,
     private backendService : RequisicaoService
@@ -27,12 +31,17 @@ export class PaginaCriacaoVagasComponent implements OnInit {
     )
   }
 
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
+
   onSubmit() {
+    
     this.backendService.enviar_dados_de_criacao_de_vagas(this.paginaCriacaoVagas.value).
       subscribe((result) => {
-        
-        console.log(this.paginaCriacaoVagas.value)
-        console.log(result)
+      this.alertDoServidor = true;
+      this.msgDeEnvio = result;
+      this.paginaCriacaoVagas.reset();
       });
       
     }

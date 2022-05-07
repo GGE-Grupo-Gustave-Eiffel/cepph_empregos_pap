@@ -19,7 +19,7 @@ const routes: Routes = [
 
   {
     path : 'criar',  
-    canActivate: [GuardasService],
+    // canActivate: [GuardasService],
     loadChildren : () => import('./pagina-criacao-vagas/pagina-criacao-vagas.module').then(m => m.PaginaCriacaoVagasModule)
   },
 
