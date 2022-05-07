@@ -1,5 +1,15 @@
 <div class="container">
-    <h2 class="secondary-title">Candidaturas submetidas</h2>
+
+<!--
+    <div class="filtros">
+        <button *ngFor="let filtro of nome_das_vagas" (click)="filtro()">{{filtro}}</button>
+    </div>
+-->
+
+<a href="/inscritos">Todos os candidatos</a>
+<button  (click)="filtro(i)" *ngFor="let i of nome_das_vagas">{{i.valor_alternativo}}</button>
+
+    <h2 class="secondary-title">Candidaturas submetidas (TOTAL DE CANDIDATOS : {{inscricoes_dados.incritos.length}})</h2>
 
     <ul class="grid-duas-colunas">
         <li  *ngFor="let inscricao of inscricoes_dados.incritos">
@@ -14,10 +24,6 @@
                 </section>
 
                 <section class="parte-dados">
-                    <p>
-                        <span class="rotulo">Nome da vaga</span> : {{inscricao.Nome}}
-                    </p>
-
                     <p>
                         <span class="rotulo">B.I</span> : {{inscricao.BI}}
                     </p>
@@ -46,9 +52,7 @@
                         <span class="rotulo">Nível acadêmico</span> : {{inscricao.Nivel_academico}}
                     </p>
 
-                    <p>
-                        <span class="rotulo">Vaga</span> : {{inscricao.Id_vaga}}
-                    </p>
+
                 </section>
 
                 <section class="anular-inscricao">

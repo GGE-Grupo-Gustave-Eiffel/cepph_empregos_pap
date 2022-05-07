@@ -20,6 +20,15 @@ export class RequisicaoService {
    return this.httpClient.get('http://127.0.0.1:8000/api/inscritos');
   }
 
+  listar_vagas() {
+    return this.httpClient.get('http://127.0.0.1:8000/api/vagas');
+  }
+  
+  filtros(nome_do_filtro : any){
+    return this.httpClient.get('http://127.0.0.1:8000/api/filtro?campo='+nome_do_filtro.campo+'&valor='+nome_do_filtro.valor);
+
+  }
+
   enviar_dados_de_candidatura(obj_de_candidatura : any) {
     return this.httpClient.post('http://127.0.0.1:8000/api/cadastro', obj_de_candidatura);
   }
@@ -28,9 +37,7 @@ export class RequisicaoService {
     return this.httpClient.post('http://127.0.0.1:8000/api/vagas', obj_de_vagas);
   }
 
-  listar_vagas() {
-    return this.httpClient.get('http://127.0.0.1:8000/api/vagas');
-  }
+
   /*list(){
     return this.http.get<any[]>(`${environment.baseUrl}/inscritos`);
   }*/

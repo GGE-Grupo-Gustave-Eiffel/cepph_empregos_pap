@@ -11,26 +11,54 @@ export class PaginaInscritosComponent implements OnInit {
 
   public inscricoes_dados!: any;
 
+  //Convertendo o grau_acadêmico!
+
+  // filtros:
+  public nome_das_vagas: any = [
+    {campo : "Nivel_academico", valor_alternativo : "Técnico Superior", valor : 3},
+    {campo : "genero", valor_alternativo : "Candidatos do Gênero Femenino", valor : "Femenino"},
+    {campo : "genero", valor_alternativo :"Candidatos do Gênero Masculino",  valor : "Masculino"},
+    {campo : "nacionalidade", valor_alternativo : "Nacionalidade Angolana", valor : "Angolana"}
+  ];
+
 
   constructor(private requisicaoService : RequisicaoService) { 
 
   }
 
   ngOnInit() :  void {
-  
-    this.listar();
-  /*this.requisicaoService.listar().subscribe((dados) => {
-     this.inscricoes_dados.push(dados);
-    });*/
-    
+    this.listarInscritos();
+    this.listarVagas()
   }
 
-    listar (){
-
-    //this.requisicaoService.listar().subscribe(dados => this.inscricoes_dados = dados);
-    console.log('<h3>Listando</h3>');
+  listarInscritos(){
     this.requisicaoService.listar_candidatos_inscritos().subscribe(res =>{
       this.inscricoes_dados = res
+      //console.log(this.inscricoes_dados)
     })
+  }
+
+  listarVagas() {
+    this.requisicaoService.listar_vagas().subscribe((res : any) =>{
+      res.vagas.forEach((vaga : any)=>{
+        let obj_vaga = {
+          campo : "Id_vaga",
+          valor_alternativo : vaga.cargo,
+          valor : vaga.Id
+        }
+
+        this.nome_das_vagas.push(obj_vaga);
+      });
+    });
+  }
+
+  
+
+
+  filtro(i : any) {
+    this.requisicaoService.filtros(i).subscribe((res : any) =>{
+      debugger
+      this.inscricoes_dados = res;
+    });
   }
 }
