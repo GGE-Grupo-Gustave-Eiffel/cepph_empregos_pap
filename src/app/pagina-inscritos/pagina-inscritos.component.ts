@@ -22,9 +22,7 @@ export class PaginaInscritosComponent implements OnInit {
   ];
 
 
-  constructor(private requisicaoService : RequisicaoService) { 
-
-  }
+  constructor(private requisicaoService : RequisicaoService) { }
 
   ngOnInit() :  void {
     this.listarInscritos();
@@ -61,4 +59,12 @@ export class PaginaInscritosComponent implements OnInit {
       this.inscricoes_dados = res;
     });
   }
-}
+
+  eliminarInscrito(BI : any){
+    console.log(BI);
+      // this.requisicaoService.eliminar_candidato(BI).subscribe(res =>{
+      //   this.listarInscritos();
+      //   this.listarVagas();
+      }
+  }
+

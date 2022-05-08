@@ -37,6 +37,9 @@ export class RequisicaoService {
     return this.httpClient.post('http://127.0.0.1:8000/api/vagas', obj_de_vagas);
   }
 
+  eliminar_candidato(BI : any) {
+    return this.httpClient.delete('http://127.0.0.1:8000/api/inscritos/'+ BI);
+  }
 
   /*list(){
     return this.http.get<any[]>(`${environment.baseUrl}/inscritos`);
