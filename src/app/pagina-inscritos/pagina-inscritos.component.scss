@@ -54,7 +54,7 @@ h2{
     margin-top : 20px;
 }
 
-.anular-inscricao button {
+.anular-inscricao button{
     padding : 10px;
     text-transform: uppercase;
     color : #fff;
@@ -68,4 +68,43 @@ h2{
 .filtros {
     display : flex;
     gap : 0.8rem;
+}
+
+:hover.botao-filtro{
+    background-color: #1864ab;
+}
+
+// .botao-filtro{
+    
+//     display: table-column-group;
+//     width: auto;
+//     height: 1.8rem;
+//     font-size: 1.8rem;
+//     text-justify: center;
+//     padding : 1.6rem;
+//     margin: 0.8rem;
+//     color : #fff;
+//     border : none;
+//     background-color: #5d92c7;
+//     border-radius: 3px;
+// }
+
+.botao-filtro{
+    padding : 10px;
+    text-transform: uppercase;
+    color : #fff;
+    border-radius : 100px;
+    background-color: rgb(42, 77, 190);
+    font-weight: bold;
+    margin: 0.4rem;
+    cursor: pointer;
+    border : none;
+}
+
+.top{
+    margin-top: 2.8rem;
+}
+
+a{
+    text-decoration: none;
 }

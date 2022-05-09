@@ -6,10 +6,18 @@
     </div>
 -->
 
-<a href="/inscritos">Todos os candidatos</a>
-<button  (click)="filtro(i)" *ngFor="let i of nome_das_vagas">{{i.valor_alternativo}}</button>
+<div class="filtro">
+    <div class="descricao margin-big-bottom">
+        <p class="describing-text">Filtros</p>
+    </div>
+    <a href="/inscritos" class="botao-filtro">Todos os candidatos</a>
+    <button  (click)="filtro(i)" *ngFor="let i of nome_das_vagas" class="botao-filtro">{{i.valor_alternativo}}</button>
+</div>
 
-    <h2 class="secondary-title">Candidaturas submetidas (TOTAL DE CANDIDATOS : {{inscricoes_dados.incritos.length}})</h2>
+    <div class="descricao margin-medium-top top">
+        <p class="secondary-title ">Candidaturas submetidas (TOTAL DE CANDIDATOS : {{inscricoes_dados.incritos.length}})</p>
+    </div>
+    <h2 class="secondary-title"></h2>
 
     <ul class="grid-duas-colunas">
         <li  *ngFor="let inscricao of inscricoes_dados.incritos">
@@ -56,7 +64,7 @@
                 </section>
 
                 <section class="anular-inscricao">
-                    <button>Anular Inscrição</button>
+                    <button (click)="eliminarInscrito">Anular Inscrição</button>
                 </section>
             </div>
         </li>
