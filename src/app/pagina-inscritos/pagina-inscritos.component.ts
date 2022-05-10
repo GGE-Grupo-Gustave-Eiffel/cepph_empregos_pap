@@ -10,6 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class PaginaInscritosComponent implements OnInit {
 
   public inscricoes_dados!: any;
+  public nivelAcademico : Array<any> = [
+  'Ensino Base (1ª - 9ª)',
+  'Ensino Médio ou Técnico Médio (10ª - 13ª)',
+  'Ensino Superior',
+  'Sem Educação formal'
+  ];
 
   //Convertendo o grau_acadêmico!
 
@@ -28,6 +34,12 @@ export class PaginaInscritosComponent implements OnInit {
     this.listarInscritos();
     this.listarVagas()
   }
+  converteIdEmNumero(id : any) {
+    console.log(id);
+    let idEmNumero = +(id.Nivel_academico);
+    return idEmNumero - 1;
+  }
+
 
   listarInscritos(){
     this.requisicaoService.listar_candidatos_inscritos().subscribe(res =>{
@@ -50,7 +62,6 @@ export class PaginaInscritosComponent implements OnInit {
     });
   }
 
-  
 
 
   filtro(i : any) {
@@ -60,11 +71,11 @@ export class PaginaInscritosComponent implements OnInit {
     });
   }
 
-  eliminarInscrito(BI : any){
-    console.log(BI);
-      // this.requisicaoService.eliminar_candidato(BI).subscribe(res =>{
-      //   this.listarInscritos();
-      //   this.listarVagas();
-      }
+  eliminarInscrito(BI : string){
+    this.requisicaoService.eliminar_candidato(BI).subscribe((res : any) =>{
+     console.log(res)
+    })
   }
+  
+}
 

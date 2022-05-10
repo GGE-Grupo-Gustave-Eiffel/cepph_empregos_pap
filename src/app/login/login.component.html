@@ -1,12 +1,12 @@
 <div class="login-container flex-container space-between">
-    
+    <form (ngSubmit)="onSubmit()" [formGroup]="formularioLogin">
     <div class="utilizador margin-big-bottom">
         <p class="fazer secondary-title">Fazer Login</p>
-        <label for="" class="text-senha">Nome de Administrador:</label>
-        <input placeholder="Digite o Nome de Utilizador" type="text" class="input-senha margin-big-bottom">
-        <label for="" class="text-senha">Senha:</label>
-        <input placeholder="Digite a Senha" type="password" class="input-senha margin-big-bottom">
-        <input class="entrar btn btn-formulario" type="submit" value="Entrar" [disabled]="">
+        <label for="email" class="text-senha">Nome de Administrador:</label>
+        <input placeholder="Digite o Nome de Utilizador" type="email" class="input-senha margin-big-bottom" name="email" formControlName="email">
+        <label for="password" class="text-senha">Senha:</label>
+        <input placeholder="Digite a Senha" type="password" class="input-senha margin-big-bottom" name="password" formControlName="password">
+        <input class="entrar btn btn-formulario" type="submit" value="Entrar">
     </div>  
-
+</form>
 </div>

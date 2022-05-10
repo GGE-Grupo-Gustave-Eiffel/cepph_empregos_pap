@@ -8,6 +8,12 @@
     text-align: left;
 }
 
+option {
+    font-size: 1.4rem;
+    color: black;
+}
+
+
 .rotulo-e-input {
     flex-direction: column;
     justify-content: start;
@@ -22,6 +28,8 @@
 .input-de-dados {
     height: 2.2rem;
     color : #868e96;
+    font-size: 1.4rem;
+    color: black;
 }
 
 .rotulo-do-input,
