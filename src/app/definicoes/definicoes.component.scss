@@ -6,9 +6,10 @@
 }
 
 .vagas-definicoes{
-    width: 50%;
+    width:100%;
     height: 100vh;
     margin-left: 2.2rem;
+    padding-top: 40px;
 }
 
 .text-senha {
@@ -26,4 +27,99 @@
     height: 3.2rem;
     color : #868e96;
 
+}
+
+.vagas-list {
+    display : block;
+    flex-direction: column;
+}
+
+.definicoes-container{
+    padding-bottom: 400px;
+}
+
+/*ESTILIZAÇÃO PARA O CARTÃO DE VAGAS*/
+
+
+.aviso-icone {
+    width: 24px;
+    height: 24px;
+    stroke : #c92a2a;
+}
+
+.cartao-vaga {
+    display: inline-block;
+    margin: 0 0.8rem 0.8rem 0;
+    background-color: #fff;
+    border : solid 2px #e9ecef;
+    background-color: #fff;
+    padding : 2.4rem;
+}
+
+
+
+.aviso-texto p {
+    color : #c92a2a;
+}
+
+.cartao-vaga, .parte-principal {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.rotulo, .valor {
+    text-transform: uppercase;
+}
+
+.btn-candidatura a {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.valor {
+    font-weight: 800;
+}
+
+.barra-nav {
+    padding : 2.4rem 0;
+    border-bottom: solid 8px #d0ebff;
+}
+
+
+
+
+/*ESTILIZAÇÃO DO LOGOTIPO*/
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size : 2.2rem;
+    font-weight: 900;
+    color : #1864ab;
+    text-transform: uppercase;
+    letter-spacing: 1.2;
+}
+
+.nav-itens a:link, .nav-itens a:visited {
+    text-decoration: none;
+}
+
+// Estilização do erro!
+.erro-de-envio {
+    width: 100%;
+    padding : 10px;
+    background-color : #0e700f;
+    color : #fff;
+}
+
+.erro-de-envio p {
+    font-size : 1.8rem;
+}
+
+.barra-nav {
+    padding : 2.4rem 0;
+    border-bottom: solid 8px #d0ebff;
 }

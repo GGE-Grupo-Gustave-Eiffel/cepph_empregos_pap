@@ -10,13 +10,22 @@ import { Component, OnInit } from '@angular/core';
 export class PaginaInscritosComponent implements OnInit {
 
   public inscricoes_dados!: any;
+  public mostrar_descricao : boolean = false;
+  public mostrar_descricao_rotulo : string = 'Mostrar';
+
+  public nivelAcademico : Array<any> = [
+  'Ensino Base (1ª - 9ª)',
+  'Ensino Médio ou Técnico Médio (10ª - 13ª)',
+  'Ensino Superior',
+  'Sem Educação formal'
+  ];
 
   //Convertendo o grau_acadêmico!
 
   // filtros:
   public nome_das_vagas: any = [
     {campo : "Nivel_academico", valor_alternativo : "Técnico Superior", valor : 3},
-    {campo : "genero", valor_alternativo : "Candidatos do Gênero Femenino", valor : "Femenino"},
+    {campo : "genero", valor_alternativo : "Candidatos do Gênero Femenino", valor : "Feminino"},
     {campo : "genero", valor_alternativo :"Candidatos do Gênero Masculino",  valor : "Masculino"},
     {campo : "nacionalidade", valor_alternativo : "Nacionalidade Angolana", valor : "Angolana"}
   ];
@@ -28,6 +37,12 @@ export class PaginaInscritosComponent implements OnInit {
     this.listarInscritos();
     this.listarVagas()
   }
+  converteIdEmNumero(id : any) {
+    console.log(id);
+    let idEmNumero = +(id.Nivel_academico);
+    return idEmNumero - 1;
+  }
+
 
   listarInscritos(){
     this.requisicaoService.listar_candidatos_inscritos().subscribe(res =>{
@@ -50,21 +65,27 @@ export class PaginaInscritosComponent implements OnInit {
     });
   }
 
-  
-
+  mostrarDescricaoProfissional() {
+    this.mostrar_descricao = !this.mostrar_descricao;
+    if (this.mostrar_descricao_rotulo == 'Mostrar') {
+      this.mostrar_descricao_rotulo = 'Esconder'
+    } else {
+      this.mostrar_descricao_rotulo = 'Mostrar'
+    }
+  }
 
   filtro(i : any) {
     this.requisicaoService.filtros(i).subscribe((res : any) =>{
-      debugger
+      //debugger
       this.inscricoes_dados = res;
     });
   }
 
-  eliminarInscrito(BI : any){
-    console.log(BI);
-      // this.requisicaoService.eliminar_candidato(BI).subscribe(res =>{
-      //   this.listarInscritos();
-      //   this.listarVagas();
-      }
+  eliminarInscrito(BI : string){
+    this.requisicaoService.eliminar_candidato(BI).subscribe((res : any) =>{
+     console.log(res)
+    })
   }
+  
+}
 

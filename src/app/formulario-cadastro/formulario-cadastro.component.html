@@ -1,8 +1,21 @@
- <form class="formulario flex-container gap-small " (ngSubmit)="onSubmit()" [formGroup]="formularioDeCadastro">
-
-    <div class="erro-de-envio" *ngIf="alertDoServidor">
-        <p>{{msgDeEnvio.message}}</p>
+<nav class="barra-nav">
+ 
+    <div class="container flex-container space-between">
+      <div>
+        <a href="/" class="logo-link">
+          <h3 class="logo-text">C-EPH</h3>
+        </a>
+      </div>
+    
+      <div class="nav-itens flex-container gap-small">
+        <a class="btn" routerLink="/login">Login</a>
+        <!--<a class="btn" routerLink="/cadastro">Empregos</a>-->
+      </div>
     </div>
+  
+  </nav>
+ 
+ <form class="formulario flex-container gap-small " (ngSubmit)="onSubmit()" [formGroup]="formularioDeCadastro">
 
     <div class="descricao margin-big-bottom">
         <p class="secondary-title ">Dados Pessoais</p>
@@ -12,20 +25,19 @@
     <div class="lado-a-lado flex-container gap-medium">
         <div class="rotulo-e-input flex-container gap-small">
             <label class="rotulo-do-input assim" for="nome">Digite seu nome completo</label>
-            <input class="input-de-dados" type="text" formControlName="nome"  name="nome">
+            <input class="input-de-dados" id="nome" type="text" formControlName="nome"  name="nome">
         </div>
         
         <div class="rotulo-e-input flex-container gap-small">
             <label class="rotulo-do-input assim" for="data">Insire sua data de nascimento</label>
-            <input class="input-de-dados" type="date" formControlName="data" name="data">
+            <input class="input-de-dados" id="data" type="date" formControlName="data" name="data">
         </div> 
 
         <div class="rotulo-e-input flex-container gap-small">
             <label class="rotulo-do-input assim" for="genero">Seleccione seu gênero</label>
-            <select class="input-de-dados select-input" formControlName="genero" name="genero">
+            <select class="input-de-dados select-input" id="genero" formControlName="genero" name="genero">
                 <option value="Masculino">Masculino</option>
-                <option value="Femenino">Femenino</option>
-                
+                <option value="Feminino">Feminino</option>
             </select>
         </div>
     </div>
@@ -33,12 +45,15 @@
     <div class="lado-a-lado flex-container gap-medium margin-big-bottom">
         <div class="rotulo-e-input flex-container gap-small">
             <label class="rotulo-do-input assim" for="bi">Digite seu BI</label>
-            <input class="input-de-dados" type="text" formControlName="bi" name="bi">
+            <input class="input-de-dados" id="bi" type="text" formControlName="bi" name="bi">
         </div>
 
         <div class="rotulo-e-input flex-container gap-small">    
             <label class="rotulo-do-input assim"  for="nacionalidade">Digite a sua nacionalidade</label>
-            <input class="input-de-dados" type="text" formControlName="nacionalidade" name="nacionalidade">
+            <select class="input-de-dados select-input" id="nivel_academico" formControlName="nacionalidade" name="nacionalidade">
+                <option value="Angolana">Angolana</option>
+                <option value="Estrangeira">Estrangeira</option>
+            </select>
         </div>     
     </div>
 
@@ -50,24 +65,24 @@
     <div class="lado-a-lado flex-container gap-medium margin-big-bottom">
         <div class="rotulo-e-input flex-container gap-small">    
             <label class="rotulo-do-input assim" for="email">Digite seu E-mail</label>
-            <input class="input-de-dados" type="text" formControlName="email" name="email">
+            <input class="input-de-dados" id="email" type="text" formControlName="email" name="email">
         </div>
 
         <div class="rotulo-e-input flex-container gap-small">
             <label class="rotulo-do-input assim" for="telefone">Digite seu telefone</label>
-            <input class="input-de-dados" type="text" formControlName="telefone" name="telefone">
+            <input class="input-de-dados" id="telefone" type="text" formControlName="telefone" name="telefone">
         </div>  
     </div>    
 
     <div class="descricao margin-big-bottom">
         <p class="secondary-title ">Informação acadêmica e Profissional</p>
-        <p class="describing-text">*Todos os campos são obrigatórios</p>
+        <p class="describing-text">*O nível académico é obrigatório</p>
     </div>
 
     <div class="lado-a-lado flex-container gap-medium">
         <div class="rotulo-e-input flex-container gap-small">
             <label class="rotulo-do-input assim" for="nivel_academico">Seleccione seu nível académico</label>
-            <select class="input-de-dados select-input" formControlName="nivel_academico" NAME="nivel_academico">
+            <select class="input-de-dados select-input" id="nivel_academico" formControlName="nivel_academico" NAME="nivel_academico">
                 <option value="1">Ensino Base(1ª - 9ª)</option>
                 <option value="2">Ensino Médio ou Técnico Médio (10ª - 13ª)</option>
                 <option value="3">Ensino Superior</option>
@@ -77,14 +92,18 @@
 
         <div class="rotulo-e-input flex-container gap-small">    
             <label class="rotulo-do-input assim" for="anos_xp">Digite abaixo quantos anos de experiência tu tens.</label>
-            <input class="input-de-dados" type="number" formControlName="anos_xp" name="anos_xp">
+            <input class="input-de-dados" id="number"  type="number" formControlName="anos_xp" name="anos_xp">
         </div>    
     </div>
         
     <div class="rotulo-e-input flex-container gap-small margin-big-bottom">    
         <label class="rotulo-do-input assim" for="descricao_xp">Faça uma breve descrição profissional. E explique o motivo porque deve ser contratado.</label>
-        <input class="input-de-dados" type="text" formContolName="descricao_xp" name="descricao_xp">
+        <input class="input-de-dados" id="descricao_xp"  type="text" formControlName="descricao_xp" name="descricao_xp">
     </div>    
 
     <input class="btn btn-formulario" type="submit" value="Submeter Candidatura" >
+
+    <div class="erro-de-envio" *ngIf="alertDoServidor">
+        <p>{{msgDeEnvio.message}}</p>
+    </div>
 </form>

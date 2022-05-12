@@ -1,3 +1,24 @@
+<nav class="barra-nav">
+ 
+    <div class="container flex-container space-between">
+      <div>
+        <a href="/" class="logo-link">
+          <h3 class="logo-text">C-EPH</h3>
+        </a>
+      </div>
+    
+      <div class="nav-itens flex-container gap-small">
+        <a class="btn"  href="/criar">Criar Vagas</a>
+        <!--<a class="btn" routerLink="/cadastro">Empregos</a>-->
+      </div>
+      <div class="nav-itens flex-container gap-small">
+        <a class="btn" href="/definicoes">Definições</a>
+        <!--<a class="btn" routerLink="/cadastro">Empregos</a>-->
+      </div>
+    </div>
+  
+  </nav>
+
 <div class="container">
 
 <!--
@@ -10,7 +31,7 @@
     <div class="descricao margin-big-bottom">
         <p class="describing-text">Filtros</p>
     </div>
-    <a href="/inscritos" class="botao-filtro">Todos os candidatos</a>
+    <a href="/inscritos" class="botao-filtro todos">Todos os candidatos</a>
     <button  (click)="filtro(i)" *ngFor="let i of nome_das_vagas" class="botao-filtro">{{i.valor_alternativo}}</button>
 </div>
 
@@ -19,7 +40,7 @@
     </div>
     <h2 class="secondary-title"></h2>
 
-    <ul class="grid-duas-colunas">
+    <ul class="candidato-container">
         <li  *ngFor="let inscricao of inscricoes_dados.incritos">
             <div class="candidatura">
 
@@ -57,14 +78,17 @@
                     </p>
 
                     <p>
-                        <span class="rotulo">Nível acadêmico</span> : {{inscricao.Nivel_academico}}
+                        <span class="rotulo">Nível acadêmico</span> : {{inscricao.Nivel_academico}} 
                     </p>
+                    <!-- {{nivelAcademico[converteIdEmNumero()]}} -->
 
+                    <button class="btn" (click)="mostrarDescricaoProfissional()">{{this.mostrar_descricao_rotulo}} descrição Profissional</button>
+                    <p class="descricao-text" *ngIf="mostrar_descricao">{{inscricao.descricao_xp}}</p>
 
                 </section>
 
                 <section class="anular-inscricao">
-                    <button (click)="eliminarInscrito">Anular Inscrição</button>
+                    <button class="" (click)="eliminarInscrito(inscricao.BI)">Anular Inscrição</button>
                 </section>
             </div>
         </li>

@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
 })
 export class GuardasService implements CanActivate {
   canActivate() {
-    console.log("AlwaysAuthGuard");
     return false;
   }
   constructor() { }

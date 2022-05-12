@@ -33,8 +33,8 @@ export class FormularioCadastroComponent implements OnInit {
       genero : ['' , [Validators.required]],
       nivel_academico :['',[Validators.required]],
       telefone :  ['', [Validators.required]],
-      anos_xp : ['',[Validators.required]],
-      descricao_xp : ['',[Validators.required]],
+      anos_xp : [''],
+      descricao_xp : [''],
       Id_vaga : ['' , [Validators.required]]
       }
     )
@@ -54,8 +54,10 @@ export class FormularioCadastroComponent implements OnInit {
 
   onSubmit()
   {
+    console.log(this.formularioDeCadastro.value);
     this.backendService.enviar_dados_de_candidatura(this.formularioDeCadastro.value).
     subscribe((result) => {
+      
       this.alertDoServidor = true;
       this.msgDeEnvio = result;
       this.formularioDeCadastro.reset();

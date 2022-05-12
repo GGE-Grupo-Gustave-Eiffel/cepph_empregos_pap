@@ -1,3 +1,20 @@
+<nav class="barra-nav">
+ 
+    <div class="container flex-container space-between">
+      <div>
+        <a href="/" class="logo-link">
+          <h3 class="logo-text">C-EPH</h3>
+        </a>
+      </div>
+    
+      <div class="nav-itens flex-container gap-small">
+        <a class="btn" routerLink="/login">Login</a>
+        <!--<a class="btn" routerLink="/cadastro">Empregos</a>-->
+      </div>
+    </div>
+  
+  </nav>
+
 <div class="descricao margin-big-bottom">
     <p class="secondary-title assim">Empregos disponíveis</p>
     <p class="describing-text assim">*Atenção ao limite da candidatura</p>
@@ -16,7 +33,7 @@
         </div>
 
         <div class="departamento flex-container gap-small margin-big-bottom">
-            <p class="rotulo describing-text assim">departamento:</p>
+            <p class="rotulo describing-text assim">Departamento:</p>
             <p class="valor describing-text assim"> {{departamentos[converteIdEmNum(vagas)]}}</p>
         </div>
 
@@ -31,6 +48,6 @@
     </div>
 
     <div class="btn-candidatura">
-        <a class="btn" [routerLink]="['/cadastro', vagas.Id]">Candidatar-se</a>
+        <a class="btn candidatar" [routerLink]="['/cadastro', vagas.Id]">Candidatar-se</a>
     </div>
 </div>
