@@ -12,6 +12,8 @@ export class DefinicoesComponent implements OnInit {
   public subscricao01! : any;
   public subscricao02! : any;
 
+  public msgDeEnvio! : any;
+  public alertDoServidor : boolean = false;
 
   public vagas_disponiveis !: any;
   public departamentos : Array<any> = [
@@ -34,11 +36,13 @@ export class DefinicoesComponent implements OnInit {
 
   eliminarVaga(vagasID : any) {
     this.subscricao02 = this.requisicaoService.elimina_vagas(vagasID).subscribe((res : any) => {
-      console.log(res);
+      this.alertDoServidor = true;
+      this.msgDeEnvio = res.message;
     });
   }
 
   ngOnDestroy() : void {
     this.subscricao01.unsubscribe();
+    this.subscricao02.unsubscribe();
   } 
 }

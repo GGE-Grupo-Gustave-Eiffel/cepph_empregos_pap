@@ -13,11 +13,12 @@
     box-shadow: 0 10px 10px 0 rgba(87, 87, 87, 0.13);
 }
 
-.grid-duas-colunas {
-    display : grid;
-    column-gap : 60px;
-    grid-template-columns: 1fr 1fr;
+.candidato-container {
+    display : flex;
+    flex-direction: column;
+    gap : 2.4rem; 
 }
+
 
 .nome-candidato {
     text-transform: uppercase;
@@ -107,4 +108,8 @@ h2{
 
 a{
     text-decoration: none;
+}
+
+.descricao-text {
+    padding-top : 2.0rem;
 }

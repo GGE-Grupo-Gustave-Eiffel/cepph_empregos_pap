@@ -54,8 +54,10 @@ export class FormularioCadastroComponent implements OnInit {
 
   onSubmit()
   {
+    console.log(this.formularioDeCadastro.value);
     this.backendService.enviar_dados_de_candidatura(this.formularioDeCadastro.value).
     subscribe((result) => {
+      
       this.alertDoServidor = true;
       this.msgDeEnvio = result;
       this.formularioDeCadastro.reset();

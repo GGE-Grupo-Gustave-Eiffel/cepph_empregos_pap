@@ -12,6 +12,11 @@
     </div>
 
     <div class="vagas-definicoes margin-big-bottom ">
+
+        <div class="erro-de-envio" *ngIf="alertDoServidor">
+            <p>{{msgDeEnvio}}</p>
+        </div>
+
         <p class="secondary-title ">Definições de Vagas</p>
     
         <div class="vagas-list gap-medium">

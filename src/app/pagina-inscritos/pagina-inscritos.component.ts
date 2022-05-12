@@ -10,6 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class PaginaInscritosComponent implements OnInit {
 
   public inscricoes_dados!: any;
+  public mostrar_descricao : boolean = false;
+  public mostrar_descricao_rotulo : string = 'Mostrar';
+
   public nivelAcademico : Array<any> = [
   'Ensino Base (1ª - 9ª)',
   'Ensino Médio ou Técnico Médio (10ª - 13ª)',
@@ -62,7 +65,14 @@ export class PaginaInscritosComponent implements OnInit {
     });
   }
 
-
+  mostrarDescricaoProfissional() {
+    this.mostrar_descricao = !this.mostrar_descricao;
+    if (this.mostrar_descricao_rotulo == 'Mostrar') {
+      this.mostrar_descricao_rotulo = 'Esconder'
+    } else {
+      this.mostrar_descricao_rotulo = 'Mostrar'
+    }
+  }
 
   filtro(i : any) {
     this.requisicaoService.filtros(i).subscribe((res : any) =>{
