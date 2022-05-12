@@ -25,7 +25,7 @@ export class PaginaInscritosComponent implements OnInit {
   // filtros:
   public nome_das_vagas: any = [
     {campo : "Nivel_academico", valor_alternativo : "Técnico Superior", valor : 3},
-    {campo : "genero", valor_alternativo : "Candidatos do Gênero Femenino", valor : "Femenino"},
+    {campo : "genero", valor_alternativo : "Candidatos do Gênero Femenino", valor : "Feminino"},
     {campo : "genero", valor_alternativo :"Candidatos do Gênero Masculino",  valor : "Masculino"},
     {campo : "nacionalidade", valor_alternativo : "Nacionalidade Angolana", valor : "Angolana"}
   ];
@@ -76,7 +76,7 @@ export class PaginaInscritosComponent implements OnInit {
 
   filtro(i : any) {
     this.requisicaoService.filtros(i).subscribe((res : any) =>{
-      debugger
+      //debugger
       this.inscricoes_dados = res;
     });
   }

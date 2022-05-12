@@ -48,7 +48,14 @@ option {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 2.0rem;
+    font-size: 2.4rem;
+    transition-duration: 0.8s;
+}
+
+.btn-formulario:hover{
+    background-color: #fff;
+    color: rgb(11, 31, 206);
+    border: rgb(11, 31, 206);
 }
 
 .lado-a-lado {
@@ -59,10 +66,66 @@ option {
 .erro-de-envio {
     width: 100%;
     padding : 10px;
-    background-color : #c57c7c;
+    background-color : #0e700f;
     color : #fff;
 }
 
 .erro-de-envio p {
     font-size : 1.8rem;
+}
+
+.barra-nav {
+    padding : 2.4rem 0;
+    border-bottom: solid 8px #d0ebff;
+}
+
+
+
+
+/*ESTILIZAÇÃO DO LOGOTIPO*/
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size : 2.2rem;
+    font-weight: 900;
+    color : #1864ab;
+    text-transform: uppercase;
+    letter-spacing: 1.2;
+}
+
+.nav-itens a:link, .nav-itens a:visited {
+    text-decoration: none;
+}
+
+/*ESTILIZAÇÃO DO RODAPÉ*/
+
+footer {
+    background-color : #1864ab;
+    display : flex;
+    justify-content: right;
+    align-items: center;   
+    padding-top: 0.2rem;
+    margin-top: 270px;
+    font-size: 1.2rem;
+    position:relative;
+    bottom:0px;
+    left:0px;
+    width: 100%;
+}
+
+footer {
+    justify-content: center;
+    color : #fff;
+}
+
+footer {
+    bottom : 0;
+    right : 0;
+    height: 10vh;
+} 
+
+.descricao {
+    padding-top: 4px;
 }

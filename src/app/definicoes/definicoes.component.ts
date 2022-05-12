@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable, Subscriber } from 'rxjs';
 import { RequisicaoService } from '../servico/requisicao.service';
 
+
 @Component({
   selector: 'app-definicoes',
   templateUrl: './definicoes.component.html',
@@ -21,7 +22,9 @@ export class DefinicoesComponent implements OnInit {
     'Administrativo'
   ];
 
-  constructor(private requisicaoService : RequisicaoService) { }
+  constructor(
+    private requisicaoService : RequisicaoService
+    ) { }
 
   ngOnInit(): void {
     this.subscricao01 = this.requisicaoService.listar_vagas().subscribe((res : any) =>{

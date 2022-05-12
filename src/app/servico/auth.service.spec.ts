@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EnvioDadosService } from './envio-dados.service';
+import { AuthService } from './auth.service';
 
-describe('EnvioDadosService', () => {
-  let service: EnvioDadosService;
+describe('AuthService', () => {
+  let service: AuthService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(EnvioDadosService);
+    service = TestBed.inject(AuthService);
   });
 
   it('should be created', () => {

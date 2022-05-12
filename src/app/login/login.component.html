@@ -1,12 +1,33 @@
+<nav class="barra-nav">
+ 
+    <div class="container flex-container space-between">
+      <div>
+        <a href="/" class="logo-link">
+          <h3 class="logo-text">C-EPH</h3>
+        </a>
+      </div>
+    </div>
+  
+  </nav>
+
 <div class="login-container flex-container space-between">
-    <form (ngSubmit)="onSubmit()" [formGroup]="formularioLogin">
-    <div class="utilizador margin-big-bottom">
-        <p class="fazer secondary-title">Fazer Login</p>
-        <label for="email" class="text-senha">Nome de Administrador:</label>
-        <input required  placeholder="Digite o Nome de Utilizador" type="email" id="email" class="input-senha margin-big-bottom" name="email" formControlName="email">
-        <label for="password" class="text-senha">Senha:</label>
-        <input required placeholder="Digite a Senha" type="password" class="input-senha margin-big-bottom" id="password" name="password" formControlName="password">
-        <input class="entrar btn btn-formulario" type="submit" value="Entrar" [disabled]="!formularioLogin.valid">
-    </div>  
-</form>
+    <div class="login-box">
+
+        <form (ngSubmit)="onSubmit()" [formGroup]="formularioLogin">
+            <div class="utilizador margin-big-bottom">
+                <p class="fazer secondary-title">Fazer Login</p>
+                
+                <label for="email" class="text-senha">Nome de Administrador:</label><br>
+                <input   placeholder="Digite o Nome de Utilizador" type="email" id="email" class="input-senha margin-big-bottom" name="email" formControlName="email">
+                
+                <label for="password" class="text-senha">Senha:</label><br>
+                <input  placeholder="Digite a Senha" type="password" class="input-senha margin-big-bottom" id="password" name="password" formControlName="password">
+                
+                <input routerLink="/definicoes" class="entrar btn btn-formulario" type="submit" value="Entrar">
+                
+            </div>  
+        </form>
+
+    </div>
+    
 </div>

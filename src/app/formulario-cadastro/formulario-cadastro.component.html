@@ -1,3 +1,20 @@
+<nav class="barra-nav">
+ 
+    <div class="container flex-container space-between">
+      <div>
+        <a href="/" class="logo-link">
+          <h3 class="logo-text">C-EPH</h3>
+        </a>
+      </div>
+    
+      <div class="nav-itens flex-container gap-small">
+        <a class="btn" routerLink="/login">Login</a>
+        <!--<a class="btn" routerLink="/cadastro">Empregos</a>-->
+      </div>
+    </div>
+  
+  </nav>
+ 
  <form class="formulario flex-container gap-small " (ngSubmit)="onSubmit()" [formGroup]="formularioDeCadastro">
 
     <div class="descricao margin-big-bottom">
@@ -20,7 +37,7 @@
             <label class="rotulo-do-input assim" for="genero">Seleccione seu gênero</label>
             <select class="input-de-dados select-input" id="genero" formControlName="genero" name="genero">
                 <option value="Masculino">Masculino</option>
-                <option value="Femenino">Femenino</option>
+                <option value="Feminino">Feminino</option>
             </select>
         </div>
     </div>
@@ -59,7 +76,7 @@
 
     <div class="descricao margin-big-bottom">
         <p class="secondary-title ">Informação acadêmica e Profissional</p>
-        <p class="describing-text">*Todos os campos são obrigatórios</p>
+        <p class="describing-text">*O nível académico é obrigatório</p>
     </div>
 
     <div class="lado-a-lado flex-container gap-medium">

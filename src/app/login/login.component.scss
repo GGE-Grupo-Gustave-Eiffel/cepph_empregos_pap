@@ -1,8 +1,14 @@
 /*ESILIZÇÃO PARA AS DEFINIÇÕES DO ADMNISTRADOR*/
 .login-container{
-    padding-left: 25%;
-    padding-right: 50%;
-    height: 68.2vh;
+    margin : 0 auto;
+    display : flex;
+    justify-content: center;
+    
+}
+
+.login-box {
+    padding : 1.6rem;
+    box-shadow: 0 10px 10px 0 rgba(87, 87, 87, 0.13);
 }
 
 .utilizador{
@@ -39,17 +45,81 @@ p{
 }
 
 
-.text-senha {
+label.text-senha {
+    display: inline-block;
     font-size: 1.6rem;
+    margin-bottom: 1.2rem;
     color : #000000;
-    align: center;
 }
 
 .input-senha {
     display: block;
     width: 500px;
     height: 3.2rem;
+    padding : 0.8rem;
     color : #868e96;
-    border-radius: 1.8rem;
+    background-color: rgba(134, 142, 150, 0.202);
+    border : none;
 
 }
+
+.input-senha:focus {
+    outline: none;
+}
+
+.btn-formulario {
+    font-size : 1.6rem;
+    cursor : pointer;
+}
+
+.barra-nav {
+    padding : 2.4rem 0;
+    border-bottom: solid 8px #d0ebff;
+}
+
+
+
+
+/*ESTILIZAÇÃO DO LOGOTIPO*/
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size : 2.2rem;
+    font-weight: 900;
+    color : #1864ab;
+    text-transform: uppercase;
+    letter-spacing: 1.2;
+}
+
+.nav-itens a:link, .nav-itens a:visited {
+    text-decoration: none;
+}
+
+/*ESTILIZAÇÃO DO RODAPÉ*/
+
+footer {
+    background-color : #1864ab;
+    display : flex;
+    justify-content: right;
+    align-items: center;   
+    padding-top: 0.2rem;
+    margin-top: 270px;
+    font-size: 1.2rem;
+    position:relative;
+    bottom:0px;
+    left:0px;
+    width: 100%;
+}
+
+footer {
+    justify-content: center;
+    color : #fff;
+}
+
+footer {
+    bottom : 0;
+    right : 0;
+    height: 10vh;
+} 

@@ -19,18 +19,18 @@ const routes: Routes = [
   },
   {
     path : 'inscritos', 
-    canActivate: [GuardasService],
+    //canActivate: [GuardasService],
     loadChildren : () => import('./pagina-inscritos/pagina-inscritos.module').then(m => m.PaginaInscritosModule)},
 
   {
     path : 'criar',  
-    canActivate: [GuardasService],
+    //canActivate: [GuardasService],
     loadChildren : () => import('./pagina-criacao-vagas/pagina-criacao-vagas.module').then(m => m.PaginaCriacaoVagasModule)
   },
 
   {
     path : 'definicoes', 
-    canActivate: [GuardasService],
+    //canActivate: [GuardasService],
     loadChildren : () => import('./definicoes/definicoes.module').then(m => m.DefinicoesModule)
   },
   

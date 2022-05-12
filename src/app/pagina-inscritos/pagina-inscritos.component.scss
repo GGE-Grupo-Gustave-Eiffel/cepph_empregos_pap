@@ -1,6 +1,6 @@
 .container {
     width : 90vw;
-    margin : 50px auto;
+    margin : 10px auto;
     
 }
 
@@ -66,6 +66,10 @@ h2{
     border : none;
 }
 
+.todos:hover{
+    background-color: #0b8db1;
+}
+
 .filtros {
     display : flex;
     gap : 0.8rem;
@@ -112,4 +116,70 @@ a{
 
 .descricao-text {
     padding-top : 2.0rem;
+}
+
+.btn{
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.barra-nav {
+    padding : 2.2rem 0;
+    border-bottom: solid 8px #d0ebff;
+    width: 100%;
+}
+
+
+
+
+/*ESTILIZAÇÃO DO LOGOTIPO*/
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size : 2.2rem;
+    font-weight: 900;
+    color : #1864ab;
+    text-transform: uppercase;
+    letter-spacing: 1.2;
+}
+
+.nav-itens a:link, .nav-itens a:visited {
+    text-decoration: none;
+}
+
+/*ESTILIZAÇÃO DO RODAPÉ*/
+
+footer {
+    background-color : #1864ab;
+    display : flex;
+    justify-content: right;
+    align-items: center;   
+    padding-top: 0.2rem;
+    margin-top: 270px;
+    font-size: 1.2rem;
+    position:relative;
+    bottom:0px;
+    left:0px;
+    width: 100%;
+}
+
+footer {
+    justify-content: center;
+    color : #fff;
+}
+
+footer {
+    bottom : 0;
+    right : 0;
+    height: 10vh;
+} 
+
+.btn{
+    width: 100px;
 }

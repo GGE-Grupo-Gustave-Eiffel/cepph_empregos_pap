@@ -1,3 +1,24 @@
+<nav class="barra-nav">
+ 
+    <div class="container flex-container space-between">
+      <div>
+        <a href="/" class="logo-link">
+          <h3 class="logo-text">C-EPH</h3>
+        </a>
+      </div>
+    
+      <div class="nav-itens flex-container gap-small">
+        <a class="btn"href="/inscritos">Inscritos</a>
+        <!--<a class="btn" routerLink="/cadastro">Empregos</a>-->
+      </div>
+      <div class="nav-itens flex-container gap-small">
+        <a class="btn" href="/definicoes">Definições</a>
+        <!--<a class="btn" routerLink="/cadastro">Empregos</a>-->
+      </div>
+    </div>
+  
+  </nav>
+
 <form class="formulario flex-container gap-small" (ngSubmit)="onSubmit()" [formGroup]="paginaCriacaoVagas">
 
     <div class="erro-de-envio" *ngIf="alertDoServidor">
