@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RequisicaoService } from '../servico/requisicao.service';
 
 @Component({
@@ -6,7 +6,10 @@ import { RequisicaoService } from '../servico/requisicao.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+
+export class HomeComponent implements OnInit, OnDestroy {
+
+  public subscricao : any;
 
   public incricao_vagas !: any;
   public departamentos : Array<any> = [
@@ -17,7 +20,7 @@ export class HomeComponent implements OnInit {
   constructor(private requisicaoService : RequisicaoService) { }
 
   ngOnInit(): void {
-    this.requisicaoService.listar_vagas().subscribe((res : any) =>{
+    this.subscricao = this.requisicaoService.listar_vagas().subscribe((res : any) =>{
       this.incricao_vagas = res.vagas;
     });
   }
@@ -26,6 +29,10 @@ export class HomeComponent implements OnInit {
     console.log(id);
     let idEmNumero = +(id.Departamento);
     return idEmNumero - 1;
+  }
+
+  ngOnDestroy() : void {
+    this.subscricao.unsubscribe();
   }
 
   // getI_vaga(Id_v : any)

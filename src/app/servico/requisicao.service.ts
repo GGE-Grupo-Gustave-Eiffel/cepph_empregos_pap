@@ -41,6 +41,10 @@ export class RequisicaoService {
     return this.httpClient.delete('http://127.0.0.1:8000/api/inscritos/'+BI);
   }
 
+  elimina_vagas(vagaID : string) {
+    return this.httpClient.delete('http://127.0.0.1:8000/api/vagas/'+vagaID);
+  }
+
   /*list(){
     return this.http.get<any[]>(`${environment.baseUrl}/inscritos`);
   }*/

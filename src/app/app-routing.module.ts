@@ -11,7 +11,7 @@ const routes: Routes = [
 
   {path:'login', loadChildren : () => import('./login/login.module').then(m => m.LoginModule)},
   
-  {path : 'candidaturas', loadChildren : () => import('./pagina-candidaturas/pagina-candidaturas.module').then(m => m.PaginaCandidaturasModule)},
+  //{path : 'definicoes', loadChildren : () => import('./pagina-candidaturas/pagina-candidaturas.module').then(m => m.PaginaCandidaturasModule)},
 
   {path : 'cadastro/:id', loadChildren : () => import('./formulario-cadastro/formulario-cadastro.module').then(m => m.FormularioCadastroModule)},
 

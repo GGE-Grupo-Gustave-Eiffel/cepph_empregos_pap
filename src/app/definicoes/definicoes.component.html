@@ -13,6 +13,44 @@
 
     <div class="vagas-definicoes margin-big-bottom ">
         <p class="secondary-title ">Definições de Vagas</p>
+    
+        <div class="vagas-list gap-medium">
+
+            <div class="cartao-vaga flex-container gap-medium" *ngFor="let vagas of vagas_disponiveis">
+                <div class="parte-cabecalho margin-big-bottom">
+                    <h3 class="secondary-title assim">{{vagas.cargo}}</h3>
+                </div>
+                <div class="parte-principal gap-medium">
+                    
+                    <div class="numero-de-vagas flex-container gap-small">
+                        <p class="rotulo describing-text assim">vagas:</p>
+                        <p class="valor describing-text assim"> {{vagas.Numero_de_vagas}}</p>
+                    </div>
+            
+                    <div class="departamento flex-container gap-small margin-big-bottom">
+                        <p class="rotulo describing-text assim">Departamento:</p>
+                        <p class="valor describing-text assim"> {{departamentos[converteIdEmNum(vagas)]}}</p>
+                    </div>
+            
+                    <div class="aviso-limite flex-container gap-small margin-big-bottom">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="aviso-icone" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                        <div class="aviso-texto">
+                            <p class="describing-text">Disponível até {{vagas.Limite_de_candidatura}}</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="btn-candidatura">
+                    <button class="btn" (click)="eliminarVaga(vagas.Id)">Eliminar vaga</button>
+                </div>
+            </div>
+
+
+        </div>
+    
+    
     </div>
 
 </div>
